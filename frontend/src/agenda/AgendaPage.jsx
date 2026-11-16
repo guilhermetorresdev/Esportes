@@ -1,0 +1,51 @@
+import React, { useEffect, useMemo, useState } from 'react';
+import Footer from '../home/Footer.jsx';
+import { agruparEventos, atualizarEvento, criarEvento, excluirEvento, lerEventosLocais, listarEventos } from './agenda-service.js';
+import './agenda.css';
+
+const eventosIniciais = {
+    '2026-03-10': [{ titulo: 'Seleção de Atletas - Futsal', categoria: 'Peneira Geral', local: 'Ginásio Poliesportivo Central', hora: '14:00', responsavel: 'Prof. Ricardo Silva', descricao: 'Seleção geral de atletas para as categorias de futsal 2026.', materiais: 'Bolas de futsal, cones, coletes, apito, prancheta e fichas de avaliação.', id: 0 }],
+    '2026-03-18': [{ titulo: 'Treinamento de Ginástica Artística', categoria: 'Preparação', local: 'Centro Esportivo Betim', hora: '15:30', responsavel: 'Prof. Sofia Rocha', descricao: 'Treinamento preparatório para competição estadual.', materiais: 'Colchonetes, cones, caixa de som, fita de marcação e kit de primeiros socorros.', id: 1 }],
+    '2026-04-15': [{ titulo: 'Torneio Municipal de Futsal Masculino', categoria: 'Categoria Sub-15', local: 'Ginásio Poliesportivo Central', hora: '10:00', responsavel: 'Prof. Ricardo Silva', descricao: 'Competição municipal de futsal para meninos da categoria sub-15.', materiais: 'Bolas de futsal, coletes por equipe, placar manual, súmula, apitos e cones.', id: 2 }],
+    '2026-04-22': [{ titulo: 'Campeonato de Vôlei Feminino', categoria: 'Fase Classificatória', local: 'Quadra Esportiva do Horto', hora: '14:00', responsavel: 'Prof. Maria Oliveira', descricao: 'Confrontos pela fase classificatória do campeonato de vôlei feminino.', materiais: 'Rede de vôlei, bolas, antenas, placar, súmula, apito e bomba de calibragem.', id: 3 }],
+    '2026-04-29': [{ titulo: 'Jogos de Basquete Misto', categoria: 'Rodada 3', local: 'Ginásio Municipal', hora: '16:00', responsavel: 'Prof. Roberto Alves', descricao: 'Terceira rodada dos jogos de basquete misto.', materiais: 'Bolas de basquete, coletes, placar, súmula, apito e kit de primeiros socorros.', id: 4 }],
+    '2026-05-06': [{ titulo: 'Torneio de Handebol Masculino', categoria: 'Semifinais', local: 'Centro Esportivo Betim', hora: '09:00', responsavel: 'Prof. Eduardo Santos', descricao: 'Confrontos das semifinais do torneio de handebol masculino.', materiais: 'Bolas de handebol, coletes, cones, placar, súmula e apitos.', id: 5 }],
+    '2026-05-13': [{ titulo: 'Festival de Atletismo', categoria: 'Provas de Corrida', local: 'Estádio Municipal', hora: '08:00', responsavel: 'Prof. Carlos Mendes', descricao: 'Festival com diferentes provas de corrida e atletismo.', materiais: 'Cronômetros, cones, fitas de demarcação, coletes, pranchetas e medalhas.', id: 6 }],
+    '2026-05-20': [{ titulo: 'Campeonato de Natação', categoria: 'Eliminatórias', local: 'Piscina Municipal', hora: '11:00', responsavel: 'Prof. Juliana Ferreira', descricao: 'Provas eliminatórias do campeonato de natação.', materiais: 'Pranchetas, cronômetros, raias, toucas de identificação e kit de primeiros socorros.', id: 7 }],
+};
+
+const hojeLocal = () => {
+    const partes = Object.fromEntries(new Intl.DateTimeFormat('en-CA', { timeZone: 'America/Sao_Paulo', year: 'numeric', month: '2-digit', day: '2-digit' }).formatToParts(new Date()).map(({ type, value }) => [type, value]));
+    return `${partes.year}-${partes.month}-${partes.day}`;
+};
+const primeiroMes = () => { const hoje = hojeLocal(); return new Date(`${hoje.slice(0, 7)}-01T12:00:00`); };
+const dataTexto = data => data.toLocaleDateString('pt-BR', { month: 'long', year: 'numeric' }).toUpperCase();
+const campos = [['titulo', 'Nome do Evento', 'Ex: Torneio de Futsal'], ['categoria', 'Categoria', 'Ex: Sub-15'], ['local', 'Local', 'Ex: Ginásio Municipal'], ['hora', 'Hora', ''] , ['responsavel', 'Responsável', 'Ex: Prof. João Silva'], ['descricao', 'Descrição', 'Descrição do evento'], ['materiais', 'Materiais necessários', 'Ex: 10 bolas, 20 cones']];
+
+function Calendario({ mes, eventos, hoje, onDia, onEvento }) {
+    const inicio = new Date(mes.getFullYear(), mes.getMonth(), 1); const total = new Date(mes.getFullYear(), mes.getMonth() + 1, 0).getDate();
+    const anterior = new Date(mes.getFullYear(), mes.getMonth(), 0).getDate(); const dias = [];
+    for (let i = inicio.getDay() - 1; i >= 0; i--) dias.push(<div className="agenda-day agenda-day-muted" key={`a${i}`}><b>{anterior - i}</b></div>);
+    for (let dia = 1; dia <= total; dia++) { const chave = `${mes.getFullYear()}-${String(mes.getMonth() + 1).padStart(2, '0')}-${String(dia).padStart(2, '0')}`; const itens = eventos[chave] || []; const passado = chave < hoje; dias.push(<button type="button" key={chave} className={`agenda-day ${itens.length ? 'agenda-day-event' : ''} ${passado ? 'agenda-day-past' : ''}`} aria-current={chave === hoje ? 'date' : undefined} aria-disabled={passado || undefined} disabled={passado} onClick={() => onDia(chave)}><b>{dia}</b>{itens.map(evento => <span key={evento.id} className="agenda-event" onClick={e => { e.stopPropagation(); onEvento(chave, evento); }}>{evento.titulo}</span>)}</button>); }
+    while (dias.length < 42) { const dia = dias.length - (inicio.getDay() - 1) - total + 1; dias.push(<div className="agenda-day agenda-day-muted" key={`p${dias.length}`}><b>{dia}</b></div>); }
+    return <div className="agenda-grid">{dias}</div>;
+}
+
+function AgendaModal({ data, evento, onClose, onSave, onDelete }) {
+    const [form, setForm] = useState(() => ({ titulo: '', categoria: '', local: '', hora: '', responsavel: '', descricao: '', materiais: '', ...evento }));
+    const alterar = (name, value) => setForm(prev => ({ ...prev, [name]: value }));
+    return <div className="agenda-modal-backdrop" role="presentation" onMouseDown={e => e.target === e.currentTarget && onClose()}><section className="agenda-modal" role="dialog" aria-modal="true" aria-labelledby="agenda-modal-title"><h2 id="agenda-modal-title">{evento ? 'Editar Evento' : 'Novo Evento'}</h2><label>Data do Evento<input type="date" value={data} readOnly /></label>{campos.map(([name, label, placeholder]) => <label key={name}>{label}{name === 'descricao' || name === 'materiais' ? <textarea rows="3" value={form[name] || ''} placeholder={placeholder} onChange={e => alterar(name, e.target.value)} /> : <input type={name === 'hora' ? 'time' : 'text'} value={form[name] || ''} placeholder={placeholder} onChange={e => alterar(name, e.target.value)} required={['titulo', 'categoria', 'local', 'hora', 'responsavel'].includes(name)} />}</label>)}<div className="agenda-modal-actions"><button type="button" onClick={onClose}>Cancelar</button>{evento && <button type="button" className="agenda-danger" onClick={() => onDelete(evento.id)}>Deletar</button>}<button type="button" className="agenda-primary" onClick={() => onSave({ ...form, data, id: evento?.id })}>Salvar</button></div></section></div>;
+}
+
+export default function AgendaPage() {
+    const hoje = hojeLocal(); const [mes, setMes] = useState(primeiroMes); const [eventos, setEventos] = useState({}); const [modal, setModal] = useState(null);
+    const [carregando, setCarregando] = useState(true); const [erro, setErro] = useState(''); const [locais, setLocais] = useState([]); const [mensagem, setMensagem] = useState('');
+    const limite = useMemo(primeiroMes, []);
+    useEffect(() => { let ativo = true; listarEventos().then(lista => { if (!ativo) return; setEventos(agruparEventos(lista)); if (!lista.length) setLocais(lerEventosLocais()); }).catch(falha => { if (ativo) { setErro(falha.message); setEventos(eventosIniciais); } }).finally(() => ativo && setCarregando(false)); return () => { ativo = false; }; }, []);
+    useEffect(() => { document.title = 'Agenda de Eventos Esportivos — SEMES Betim'; }, []);
+    const abrir = (data, evento = null) => setModal({ data, evento });
+    const salvarEvento = dados => { const atual = { ...eventos }; if (dados.id !== undefined) { for (const chave of Object.keys(atual)) atual[chave] = (atual[chave] || []).filter(item => item.id !== dados.id); } atual[dados.data] = [...(atual[dados.data] || []), { ...dados, id: dados.id ?? Math.max(-1, ...Object.values(atual).flat().map(item => item.id)) + 1 }]; salvar(atual); setModal(null); };
+    const excluir = id => { const atual = Object.fromEntries(Object.entries(eventos).map(([data, itens]) => [data, itens.filter(item => item.id !== id)])); salvar(atual); setModal(null); };
+    const detalhe = (data, evento) => { localStorage.setItem('eventoSelecionado', JSON.stringify({ ...evento, data })); window.location.href = '/detalhes-evento.html'; };
+    return <><main className="agenda-page" id="conteudo" tabIndex="-1"><section className="agenda-shell"><header className="agenda-header"><div className="agenda-brand"><strong>B</strong><div><h1>Agenda de Eventos</h1><p>Secretaria de Esportes — Betim</p></div></div><div className="agenda-month"><i className="fas fa-calendar-alt" aria-hidden="true" /><div><b aria-live="polite">{dataTexto(mes)}</b><small>HOJE: {hoje.split('-').reverse().join('/')}</small></div></div></header><div className="agenda-content"><div className="agenda-toolbar"><h2>Calendário de eventos</h2><div><button type="button" disabled={mes <= limite} onClick={() => setMes(new Date(mes.getFullYear(), mes.getMonth() - 1, 1))}>← Anterior</button><button type="button" onClick={() => setMes(new Date(mes.getFullYear(), mes.getMonth() + 1, 1))}>Próximo →</button><button type="button" onClick={() => setMes(primeiroMes())}>Hoje</button><button type="button" className="agenda-primary" onClick={() => abrir(hoje)}><i className="fas fa-plus" aria-hidden="true" /> Novo evento</button></div></div><div className="agenda-calendar"><div className="agenda-week">{['Dom', 'Seg', 'Ter', 'Qua', 'Qui', 'Sex', 'Sáb'].map(dia => <b key={dia}>{dia}</b>)}</div><Calendario mes={mes} eventos={eventos} hoje={hoje} onDia={data => abrir(data)} onEvento={detalhe} /></div><div className="agenda-actions"><a href="/">← Voltar ao Portal</a><button type="button" onClick={() => window.print()}><i className="fas fa-print" aria-hidden="true" /> Imprimir agenda</button></div></div></section></main>{modal && <AgendaModal data={modal.data} evento={modal.evento} onClose={() => setModal(null)} onSave={salvarEvento} onDelete={excluir} />}<Footer /></>;
+}

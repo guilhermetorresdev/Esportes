@@ -42,16 +42,12 @@ test('catálogo tem fontes existentes e a mesma versão no frontend e backend', 
 
 test('todas as páginas com cabeçalho compartilham o suporte e o chat simulado foi retirado', () => {
     const header = readFileSync(new URL('../public/js/portal-header.js', import.meta.url), 'utf8');
-    assert.match(header, /portal-suporte\.js/);
-    assert.match(header, /portal-suporte\.css/);
+    assert.doesNotMatch(header, /portal-suporte\.js/);
+    assert.doesNotMatch(header, /portal-suporte\.css/);
     const paginas = readdirSync(new URL('../', import.meta.url)).filter(p => p.endsWith('.html'))
         .map(p => readFileSync(new URL(`../${p}`, import.meta.url), 'utf8')).filter(p => p.includes('/js/portal-header.js'));
     assert.ok(paginas.length >= 20);
     for (const pagina of paginas) assert.doesNotMatch(pagina, /id="chat-container"|function sendMessage\(/);
-    const css = readFileSync(new URL('../public/css/portal-suporte.css', import.meta.url), 'utf8');
-    assert.match(css, /overflow-y: scroll/);
-    assert.match(css, /min-height: 0/);
-    assert.match(css, /scrollbar-color:/);
 });
 
 test('histórico continua entre páginas e tolera armazenamento bloqueado', () => {

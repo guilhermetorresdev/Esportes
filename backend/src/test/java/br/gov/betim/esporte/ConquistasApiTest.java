@@ -11,6 +11,7 @@ import org.springframework.test.web.servlet.MockMvc;
 import static org.mockito.Mockito.*;
 import static org.springframework.test.web.servlet.request.MockMvcRequestBuilders.*;
 import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.*;
+import static org.springframework.security.test.web.servlet.request.SecurityMockMvcRequestPostProcessors.csrf;
 
 @SpringBootTest(properties = { "spring.datasource.url=jdbc:h2:mem:conquistas_api_test;DB_CLOSE_DELAY=-1",
     "spring.jpa.hibernate.ddl-auto=create-drop", "spring.jpa.show-sql=false", "logging.level.root=WARN", "debug=false" })
@@ -24,7 +25,7 @@ class ConquistasApiTest {
         mvc.perform(get("/api/conquistas")).andExpect(status().isOk()).andExpect(jsonPath("$.conquistas").isArray())
                 .andExpect(header().string("Cache-Control", "no-store"));
         mvc.perform(get("/api/conquistas/status")).andExpect(status().isOk());
-        mvc.perform(post("/api/conquistas/atualizar")).andExpect(status().isUnauthorized());
+        mvc.perform(post("/api/conquistas/atualizar").with(csrf())).andExpect(status().isUnauthorized());
         mvc.perform(get("/api/inscricoes")).andExpect(status().isUnauthorized());
         verify(conquistas, never()).solicitar();
     }
@@ -33,7 +34,7 @@ class ConquistasApiTest {
         var sessao = (org.springframework.mock.web.MockHttpSession) mvc.perform(post("/login")
                 .param("username", "admin").param("password", "admin123"))
                 .andExpect(status().isOk()).andReturn().getRequest().getSession(false);
-        mvc.perform(post("/api/conquistas/atualizar").session(sessao)).andExpect(status().isAccepted());
+        mvc.perform(post("/api/conquistas/atualizar").with(csrf()).session(sessao)).andExpect(status().isAccepted());
         verify(conquistas).solicitar();
     }
 }

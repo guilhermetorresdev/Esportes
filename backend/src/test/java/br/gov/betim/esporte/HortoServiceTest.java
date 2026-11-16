@@ -25,6 +25,7 @@ import org.springframework.web.server.ResponseStatusException;
 import static org.assertj.core.api.Assertions.*;
 import static org.springframework.test.web.servlet.request.MockMvcRequestBuilders.*;
 import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.*;
+import static org.springframework.security.test.web.servlet.request.SecurityMockMvcRequestPostProcessors.csrf;
 
 @SpringBootTest(properties = {
         "spring.datasource.url=jdbc:h2:mem:horto_test;DB_CLOSE_DELAY=-1",
@@ -183,29 +184,29 @@ class HortoServiceTest {
     @Test
     void apiExigeAutenticacaoERegistraResponsavel() throws Exception {
         mvc.perform(get("/api/horto/quadras")).andExpect(status().isUnauthorized());
-        mvc.perform(post("/api/horto/reservas").contentType(MediaType.APPLICATION_JSON)
+        mvc.perform(post("/api/horto/reservas").with(csrf()).contentType(MediaType.APPLICATION_JSON)
                 .content(json.writeValueAsBytes(pedido(1, data, 600, 660))))
                 .andExpect(status().isUnauthorized());
         var acesso = mvc.perform(post("/login").param("username", "admin").param("password", "admin123"))
                 .andExpect(status().isOk()).andReturn();
         var sessao = (MockHttpSession) acesso.getRequest().getSession(false);
-        mvc.perform(post("/api/horto/reservas").session(sessao).contentType(MediaType.APPLICATION_JSON)
+        mvc.perform(post("/api/horto/reservas").with(csrf()).session(sessao).contentType(MediaType.APPLICATION_JSON)
                 .content(json.writeValueAsBytes(pedido(1, data, 600, 720))))
                 .andExpect(status().isCreated()).andExpect(jsonPath("$.quadra").value(1))
                 .andExpect(jsonPath("$.responsavel").value("Responsável de teste"))
                 .andExpect(jsonPath("$.esporte").value("FUTSAL"))
                 .andExpect(jsonPath("$.agendadoPor").value("admin"))
                 .andExpect(jsonPath("$.registradoEm").exists());
-        mvc.perform(post("/api/horto/reservas").session(sessao).contentType(MediaType.APPLICATION_JSON)
+        mvc.perform(post("/api/horto/reservas").with(csrf()).session(sessao).contentType(MediaType.APPLICATION_JSON)
                 .content(json.writeValueAsBytes(pedido(1, data, 660, 780))))
                 .andExpect(status().isConflict()).andExpect(jsonPath("$.mensagem").isNotEmpty());
         mvc.perform(get("/api/horto/reservas").session(sessao).param("data", data.toString()))
                 .andExpect(status().isOk()).andExpect(jsonPath("$.length()").value(1))
                 .andExpect(jsonPath("$[0].esporte").value("FUTSAL"));
-        mvc.perform(post("/api/horto/reservas").session(sessao).contentType(MediaType.APPLICATION_JSON)
+        mvc.perform(post("/api/horto/reservas").with(csrf()).session(sessao).contentType(MediaType.APPLICATION_JSON)
                 .content(json.writeValueAsBytes(pedido(2, data.minusDays(11), 600, 660))))
                 .andExpect(status().isBadRequest()).andExpect(jsonPath("$.mensagem").isNotEmpty());
-        mvc.perform(post("/api/horto/reservas").session(sessao).contentType(MediaType.APPLICATION_JSON)
+        mvc.perform(post("/api/horto/reservas").with(csrf()).session(sessao).contentType(MediaType.APPLICATION_JSON)
                 .content(json.writeValueAsString(pedido(2, data, 600, 660)).replace("FUTSAL", "INEXISTENTE")))
                 .andExpect(status().isBadRequest());
         mvc.perform(get("/api/horto/esportes").session(sessao))

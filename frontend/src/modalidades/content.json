@@ -2,7 +2,7 @@
   "futsal": {
     "title": "Futsal — Portal do Esporte Betim",
     "nodes": [
-      "\n    ",
+      "\r\n    ",
       {
         "tag": "a",
         "props": {
@@ -13,21 +13,21 @@
           "Ir para o conteúdo"
         ]
       },
-      "\n    \n    ",
+      "\r\n    \r\n    ",
       {
         "tag": "header",
         "props": {
           "class": "modalidade-hero"
         },
         "children": [
-          "\n        ",
+          "\r\n        ",
           {
             "tag": "div",
             "props": {
               "class": "modalidade-hero-inner"
             },
             "children": [
-              "\n            ",
+              "\r\n            ",
               {
                 "tag": "span",
                 "props": {
@@ -37,7 +37,7 @@
                   "Escola de Esportes"
                 ]
               },
-              "\n            ",
+              "\r\n            ",
               {
                 "tag": "h1",
                 "props": {},
@@ -45,7 +45,7 @@
                   "Futsal"
                 ]
               },
-              "\n            ",
+              "\r\n            ",
               {
                 "tag": "p",
                 "props": {},
@@ -53,13 +53,13 @@
                   "Conheça Futsal no Programa Viva o Esporte de Betim."
                 ]
               },
-              "\n        "
+              "\r\n        "
             ]
           },
-          "\n    "
+          "\r\n    "
         ]
       },
-      "\n    ",
+      "\r\n    ",
       {
         "tag": "main",
         "props": {
@@ -68,7 +68,7 @@
           "tabindex": "-1"
         },
         "children": [
-          "\n        ",
+          "\r\n        ",
           {
             "tag": "nav",
             "props": {
@@ -104,19 +104,19 @@
               }
             ]
           },
-          "\n        ",
+          "\r\n        ",
           {
             "tag": "div",
             "props": {
               "class": "modalidade-layout"
             },
             "children": [
-              "\n            ",
+              "\r\n            ",
               {
                 "tag": "div",
                 "props": {},
                 "children": [
-                  "\n                ",
+                  "\r\n                ",
                   {
                     "tag": "section",
                     "props": {
@@ -194,7 +194,7 @@
                       }
                     ]
                   },
-                  "\n                ",
+                  "\r\n                ",
                   {
                     "tag": "section",
                     "props": {
@@ -208,7 +208,7 @@
                           "Galeria de fotos oficiais"
                         ]
                       },
-                      "\n                    ",
+                      "\r\n                    ",
                       {
                         "tag": "div",
                         "props": {
@@ -225,10 +225,10 @@
                           }
                         ]
                       },
-                      "\n                "
+                      "\r\n                "
                     ]
                   },
-                  "\n                ",
+                  "\r\n                ",
                   {
                     "tag": "section",
                     "props": {
@@ -242,7 +242,7 @@
                           "Fonte e informações atualizadas"
                         ]
                       },
-                      "\n                    ",
+                      "\r\n                    ",
                       {
                         "tag": "a",
                         "props": {
@@ -252,7 +252,7 @@
                           "Consultar a publicação oficial da Prefeitura de Betim"
                         ]
                       },
-                      "\n                    ",
+                      "\r\n                    ",
                       {
                         "tag": "p",
                         "props": {
@@ -262,13 +262,13 @@
                           "Fonte consultada em 11/11/2026. A oferta pode mudar."
                         ]
                       },
-                      "\n                "
+                      "\r\n                "
                     ]
                   },
-                  "\n            "
+                  "\r\n            "
                 ]
               },
-              "\n            ",
+              "\r\n            ",
               {
                 "tag": "aside",
                 "props": {
@@ -276,7 +276,7 @@
                   "aria-label": "Participação e agenda"
                 },
                 "children": [
-                  "\n                ",
+                  "\r\n                ",
                   {
                     "tag": "section",
                     "props": {
@@ -290,7 +290,7 @@
                           "Como participar"
                         ]
                       },
-                      "\n                    ",
+                      "\r\n                    ",
                       {
                         "tag": "p",
                         "props": {},
@@ -298,7 +298,7 @@
                           "Procure o núcleo de interesse para confirmar as condições de participação antes de realizar a inscrição."
                         ]
                       },
-                      "\n                    ",
+                      "\r\n                    ",
                       {
                         "tag": "h3",
                         "props": {},
@@ -313,7 +313,7 @@
                           "Confirme a faixa etária, os documentos exigidos, os horários e as vagas com o núcleo responsável."
                         ]
                       },
-                      "\n                    ",
+                      "\r\n                    ",
                       {
                         "tag": "a",
                         "props": {
@@ -326,10 +326,10 @@
                           "Consultar participação"
                         ]
                       },
-                      "\n                "
+                      "\r\n                "
                     ]
                   },
-                  "\n                ",
+                  "\r\n                ",
                   {
                     "tag": "section",
                     "props": {
@@ -362,13 +362,13 @@
                       }
                     ]
                   },
-                  "\n            "
+                  "\r\n            "
                 ]
               },
-              "\n        "
+              "\r\n        "
             ]
           },
-          "\n        ",
+          "\r\n        ",
           {
             "tag": "a",
             "props": {
@@ -379,10 +379,10 @@
               "← Voltar às modalidades"
             ]
           },
-          "\n    "
+          "\r\n    "
         ]
       },
-      "\n    ",
+      "\r\n    ",
       {
         "tag": "footer",
         "props": {
@@ -407,7 +407,7 @@
           }
         ]
       },
-      "\n"
+      "\r\n"
     ],
     "locations": []
   },
@@ -1057,7 +1057,7 @@
   "volei-praia": {
     "title": "Vôlei de Praia — Portal do Esporte Betim",
     "nodes": [
-      "\n    ",
+      "\r\n    ",
       {
         "tag": "a",
         "props": {
@@ -1068,21 +1068,21 @@
           "Ir para o conteúdo"
         ]
       },
-      "\n    \n    ",
+      "\r\n    \r\n    ",
       {
         "tag": "header",
         "props": {
           "class": "modalidade-hero"
         },
         "children": [
-          "\n        ",
+          "\r\n        ",
           {
             "tag": "div",
             "props": {
               "class": "modalidade-hero-inner"
             },
             "children": [
-              "\n            ",
+              "\r\n            ",
               {
                 "tag": "span",
                 "props": {
@@ -1092,7 +1092,7 @@
                   "Escola de Esportes"
                 ]
               },
-              "\n            ",
+              "\r\n            ",
               {
                 "tag": "h1",
                 "props": {},
@@ -1100,7 +1100,7 @@
                   "Vôlei de Praia"
                 ]
               },
-              "\n            ",
+              "\r\n            ",
               {
                 "tag": "p",
                 "props": {},
@@ -1108,13 +1108,13 @@
                   "Conheça Vôlei de Praia no Programa Viva o Esporte de Betim."
                 ]
               },
-              "\n        "
+              "\r\n        "
             ]
           },
-          "\n    "
+          "\r\n    "
         ]
       },
-      "\n    ",
+      "\r\n    ",
       {
         "tag": "main",
         "props": {
@@ -1123,7 +1123,7 @@
           "tabindex": "-1"
         },
         "children": [
-          "\n        ",
+          "\r\n        ",
           {
             "tag": "nav",
             "props": {
@@ -1159,19 +1159,19 @@
               }
             ]
           },
-          "\n        ",
+          "\r\n        ",
           {
             "tag": "div",
             "props": {
               "class": "modalidade-layout"
             },
             "children": [
-              "\n            ",
+              "\r\n            ",
               {
                 "tag": "div",
                 "props": {},
                 "children": [
-                  "\n                ",
+                  "\r\n                ",
                   {
                     "tag": "section",
                     "props": {
@@ -1221,7 +1221,7 @@
                       }
                     ]
                   },
-                  "\n                ",
+                  "\r\n                ",
                   {
                     "tag": "section",
                     "props": {
@@ -1235,7 +1235,7 @@
                           "Galeria de fotos oficiais"
                         ]
                       },
-                      "\n                    ",
+                      "\r\n                    ",
                       {
                         "tag": "div",
                         "props": {
@@ -1252,10 +1252,10 @@
                           }
                         ]
                       },
-                      "\n                "
+                      "\r\n                "
                     ]
                   },
-                  "\n                ",
+                  "\r\n                ",
                   {
                     "tag": "section",
                     "props": {
@@ -1269,7 +1269,7 @@
                           "Fonte e informações atualizadas"
                         ]
                       },
-                      "\n                    ",
+                      "\r\n                    ",
                       {
                         "tag": "a",
                         "props": {
@@ -1279,7 +1279,7 @@
                           "Consultar a publicação oficial da Prefeitura de Betim"
                         ]
                       },
-                      "\n                    ",
+                      "\r\n                    ",
                       {
                         "tag": "p",
                         "props": {
@@ -1289,13 +1289,13 @@
                           "Fonte consultada em 11/11/2026. A oferta pode mudar."
                         ]
                       },
-                      "\n                "
+                      "\r\n                "
                     ]
                   },
-                  "\n            "
+                  "\r\n            "
                 ]
               },
-              "\n            ",
+              "\r\n            ",
               {
                 "tag": "aside",
                 "props": {
@@ -1303,7 +1303,7 @@
                   "aria-label": "Participação e agenda"
                 },
                 "children": [
-                  "\n                ",
+                  "\r\n                ",
                   {
                     "tag": "section",
                     "props": {
@@ -1317,7 +1317,7 @@
                           "Como participar"
                         ]
                       },
-                      "\n                    ",
+                      "\r\n                    ",
                       {
                         "tag": "p",
                         "props": {},
@@ -1325,7 +1325,7 @@
                           "Procure o núcleo de interesse para confirmar as condições de participação antes de realizar a inscrição."
                         ]
                       },
-                      "\n                    ",
+                      "\r\n                    ",
                       {
                         "tag": "h3",
                         "props": {},
@@ -1340,7 +1340,7 @@
                           "Confirme a faixa etária, os documentos exigidos, os horários e as vagas com o núcleo responsável."
                         ]
                       },
-                      "\n                    ",
+                      "\r\n                    ",
                       {
                         "tag": "a",
                         "props": {
@@ -1353,10 +1353,10 @@
                           "Consultar participação"
                         ]
                       },
-                      "\n                "
+                      "\r\n                "
                     ]
                   },
-                  "\n                ",
+                  "\r\n                ",
                   {
                     "tag": "section",
                     "props": {
@@ -1389,13 +1389,13 @@
                       }
                     ]
                   },
-                  "\n            "
+                  "\r\n            "
                 ]
               },
-              "\n        "
+              "\r\n        "
             ]
           },
-          "\n        ",
+          "\r\n        ",
           {
             "tag": "a",
             "props": {
@@ -1406,10 +1406,10 @@
               "← Voltar às modalidades"
             ]
           },
-          "\n    "
+          "\r\n    "
         ]
       },
-      "\n    ",
+      "\r\n    ",
       {
         "tag": "footer",
         "props": {
@@ -1434,14 +1434,14 @@
           }
         ]
       },
-      "\n"
+      "\r\n"
     ],
     "locations": []
   },
   "handebol": {
     "title": "Handebol — Portal do Esporte Betim",
     "nodes": [
-      "\n    ",
+      "\r\n    ",
       {
         "tag": "a",
         "props": {
@@ -1452,21 +1452,21 @@
           "Ir para o conteúdo"
         ]
       },
-      "\n    \n    ",
+      "\r\n    \r\n    ",
       {
         "tag": "header",
         "props": {
           "class": "modalidade-hero"
         },
         "children": [
-          "\n        ",
+          "\r\n        ",
           {
             "tag": "div",
             "props": {
               "class": "modalidade-hero-inner"
             },
             "children": [
-              "\n            ",
+              "\r\n            ",
               {
                 "tag": "span",
                 "props": {
@@ -1476,7 +1476,7 @@
                   "Escola de Esportes"
                 ]
               },
-              "\n            ",
+              "\r\n            ",
               {
                 "tag": "h1",
                 "props": {},
@@ -1484,7 +1484,7 @@
                   "Handebol"
                 ]
               },
-              "\n            ",
+              "\r\n            ",
               {
                 "tag": "p",
                 "props": {},
@@ -1492,13 +1492,13 @@
                   "Conheça Handebol no Programa Viva o Esporte de Betim."
                 ]
               },
-              "\n        "
+              "\r\n        "
             ]
           },
-          "\n    "
+          "\r\n    "
         ]
       },
-      "\n    ",
+      "\r\n    ",
       {
         "tag": "main",
         "props": {
@@ -1507,7 +1507,7 @@
           "tabindex": "-1"
         },
         "children": [
-          "\n        ",
+          "\r\n        ",
           {
             "tag": "nav",
             "props": {
@@ -1543,19 +1543,19 @@
               }
             ]
           },
-          "\n        ",
+          "\r\n        ",
           {
             "tag": "div",
             "props": {
               "class": "modalidade-layout"
             },
             "children": [
-              "\n            ",
+              "\r\n            ",
               {
                 "tag": "div",
                 "props": {},
                 "children": [
-                  "\n                ",
+                  "\r\n                ",
                   {
                     "tag": "section",
                     "props": {
@@ -1605,7 +1605,7 @@
                       }
                     ]
                   },
-                  "\n                ",
+                  "\r\n                ",
                   {
                     "tag": "section",
                     "props": {
@@ -1619,7 +1619,7 @@
                           "Galeria de fotos oficiais"
                         ]
                       },
-                      "\n                    ",
+                      "\r\n                    ",
                       {
                         "tag": "div",
                         "props": {
@@ -1636,10 +1636,10 @@
                           }
                         ]
                       },
-                      "\n                "
+                      "\r\n                "
                     ]
                   },
-                  "\n                ",
+                  "\r\n                ",
                   {
                     "tag": "section",
                     "props": {
@@ -1653,7 +1653,7 @@
                           "Fonte e informações atualizadas"
                         ]
                       },
-                      "\n                    ",
+                      "\r\n                    ",
                       {
                         "tag": "a",
                         "props": {
@@ -1663,7 +1663,7 @@
                           "Consultar a publicação oficial da Prefeitura de Betim"
                         ]
                       },
-                      "\n                    ",
+                      "\r\n                    ",
                       {
                         "tag": "p",
                         "props": {
@@ -1673,13 +1673,13 @@
                           "Fonte consultada em 11/11/2026. A oferta pode mudar."
                         ]
                       },
-                      "\n                "
+                      "\r\n                "
                     ]
                   },
-                  "\n            "
+                  "\r\n            "
                 ]
               },
-              "\n            ",
+              "\r\n            ",
               {
                 "tag": "aside",
                 "props": {
@@ -1687,7 +1687,7 @@
                   "aria-label": "Participação e agenda"
                 },
                 "children": [
-                  "\n                ",
+                  "\r\n                ",
                   {
                     "tag": "section",
                     "props": {
@@ -1701,7 +1701,7 @@
                           "Como participar"
                         ]
                       },
-                      "\n                    ",
+                      "\r\n                    ",
                       {
                         "tag": "p",
                         "props": {},
@@ -1709,7 +1709,7 @@
                           "Procure o núcleo de interesse para confirmar as condições de participação antes de realizar a inscrição."
                         ]
                       },
-                      "\n                    ",
+                      "\r\n                    ",
                       {
                         "tag": "h3",
                         "props": {},
@@ -1724,7 +1724,7 @@
                           "Confirme a faixa etária, os documentos exigidos, os horários e as vagas com o núcleo responsável."
                         ]
                       },
-                      "\n                    ",
+                      "\r\n                    ",
                       {
                         "tag": "a",
                         "props": {
@@ -1737,10 +1737,10 @@
                           "Consultar participação"
                         ]
                       },
-                      "\n                "
+                      "\r\n                "
                     ]
                   },
-                  "\n                ",
+                  "\r\n                ",
                   {
                     "tag": "section",
                     "props": {
@@ -1773,13 +1773,13 @@
                       }
                     ]
                   },
-                  "\n            "
+                  "\r\n            "
                 ]
               },
-              "\n        "
+              "\r\n        "
             ]
           },
-          "\n        ",
+          "\r\n        ",
           {
             "tag": "a",
             "props": {
@@ -1790,10 +1790,10 @@
               "← Voltar às modalidades"
             ]
           },
-          "\n    "
+          "\r\n    "
         ]
       },
-      "\n    ",
+      "\r\n    ",
       {
         "tag": "footer",
         "props": {
@@ -1818,14 +1818,14 @@
           }
         ]
       },
-      "\n"
+      "\r\n"
     ],
     "locations": []
   },
   "basquete": {
     "title": "Basquete — Portal do Esporte Betim",
     "nodes": [
-      "\n    ",
+      "\r\n    ",
       {
         "tag": "a",
         "props": {
@@ -1836,21 +1836,21 @@
           "Ir para o conteúdo"
         ]
       },
-      "\n    \n    ",
+      "\r\n    \r\n    ",
       {
         "tag": "header",
         "props": {
           "class": "modalidade-hero"
         },
         "children": [
-          "\n        ",
+          "\r\n        ",
           {
             "tag": "div",
             "props": {
               "class": "modalidade-hero-inner"
             },
             "children": [
-              "\n            ",
+              "\r\n            ",
               {
                 "tag": "span",
                 "props": {
@@ -1860,7 +1860,7 @@
                   "Escola de Esportes"
                 ]
               },
-              "\n            ",
+              "\r\n            ",
               {
                 "tag": "h1",
                 "props": {},
@@ -1868,7 +1868,7 @@
                   "Basquete"
                 ]
               },
-              "\n            ",
+              "\r\n            ",
               {
                 "tag": "p",
                 "props": {},
@@ -1876,13 +1876,13 @@
                   "Conheça Basquete no Programa Viva o Esporte de Betim."
                 ]
               },
-              "\n        "
+              "\r\n        "
             ]
           },
-          "\n    "
+          "\r\n    "
         ]
       },
-      "\n    ",
+      "\r\n    ",
       {
         "tag": "main",
         "props": {
@@ -1891,7 +1891,7 @@
           "tabindex": "-1"
         },
         "children": [
-          "\n        ",
+          "\r\n        ",
           {
             "tag": "nav",
             "props": {
@@ -1927,19 +1927,19 @@
               }
             ]
           },
-          "\n        ",
+          "\r\n        ",
           {
             "tag": "div",
             "props": {
               "class": "modalidade-layout"
             },
             "children": [
-              "\n            ",
+              "\r\n            ",
               {
                 "tag": "div",
                 "props": {},
                 "children": [
-                  "\n                ",
+                  "\r\n                ",
                   {
                     "tag": "section",
                     "props": {
@@ -1996,7 +1996,7 @@
                       }
                     ]
                   },
-                  "\n                ",
+                  "\r\n                ",
                   {
                     "tag": "section",
                     "props": {
@@ -2010,7 +2010,7 @@
                           "Galeria de fotos oficiais"
                         ]
                       },
-                      "\n                    ",
+                      "\r\n                    ",
                       {
                         "tag": "div",
                         "props": {
@@ -2027,10 +2027,10 @@
                           }
                         ]
                       },
-                      "\n                "
+                      "\r\n                "
                     ]
                   },
-                  "\n                ",
+                  "\r\n                ",
                   {
                     "tag": "section",
                     "props": {
@@ -2044,7 +2044,7 @@
                           "Fonte e informações atualizadas"
                         ]
                       },
-                      "\n                    ",
+                      "\r\n                    ",
                       {
                         "tag": "a",
                         "props": {
@@ -2054,7 +2054,7 @@
                           "Consultar a publicação oficial da Prefeitura de Betim"
                         ]
                       },
-                      "\n                    ",
+                      "\r\n                    ",
                       {
                         "tag": "p",
                         "props": {
@@ -2064,13 +2064,13 @@
                           "Fonte consultada em 11/11/2026. A oferta pode mudar."
                         ]
                       },
-                      "\n                "
+                      "\r\n                "
                     ]
                   },
-                  "\n            "
+                  "\r\n            "
                 ]
               },
-              "\n            ",
+              "\r\n            ",
               {
                 "tag": "aside",
                 "props": {
@@ -2078,7 +2078,7 @@
                   "aria-label": "Participação e agenda"
                 },
                 "children": [
-                  "\n                ",
+                  "\r\n                ",
                   {
                     "tag": "section",
                     "props": {
@@ -2092,7 +2092,7 @@
                           "Como participar"
                         ]
                       },
-                      "\n                    ",
+                      "\r\n                    ",
                       {
                         "tag": "p",
                         "props": {},
@@ -2100,7 +2100,7 @@
                           "Procure o núcleo de interesse para confirmar as condições de participação antes de realizar a inscrição."
                         ]
                       },
-                      "\n                    ",
+                      "\r\n                    ",
                       {
                         "tag": "h3",
                         "props": {},
@@ -2115,7 +2115,7 @@
                           "Confirme a faixa etária, os documentos exigidos, os horários e as vagas com o núcleo responsável."
                         ]
                       },
-                      "\n                    ",
+                      "\r\n                    ",
                       {
                         "tag": "a",
                         "props": {
@@ -2128,10 +2128,10 @@
                           "Consultar participação"
                         ]
                       },
-                      "\n                "
+                      "\r\n                "
                     ]
                   },
-                  "\n                ",
+                  "\r\n                ",
                   {
                     "tag": "section",
                     "props": {
@@ -2164,13 +2164,13 @@
                       }
                     ]
                   },
-                  "\n            "
+                  "\r\n            "
                 ]
               },
-              "\n        "
+              "\r\n        "
             ]
           },
-          "\n        ",
+          "\r\n        ",
           {
             "tag": "a",
             "props": {
@@ -2181,10 +2181,10 @@
               "← Voltar às modalidades"
             ]
           },
-          "\n    "
+          "\r\n    "
         ]
       },
-      "\n    ",
+      "\r\n    ",
       {
         "tag": "footer",
         "props": {
@@ -2209,14 +2209,14 @@
           }
         ]
       },
-      "\n"
+      "\r\n"
     ],
     "locations": []
   },
   "iniciacao-esportiva": {
     "title": "Iniciação Esportiva — Portal do Esporte Betim",
     "nodes": [
-      "\n    ",
+      "\r\n    ",
       {
         "tag": "a",
         "props": {
@@ -2227,21 +2227,21 @@
           "Ir para o conteúdo"
         ]
       },
-      "\n    \n    ",
+      "\r\n    \r\n    ",
       {
         "tag": "header",
         "props": {
           "class": "modalidade-hero"
         },
         "children": [
-          "\n        ",
+          "\r\n        ",
           {
             "tag": "div",
             "props": {
               "class": "modalidade-hero-inner"
             },
             "children": [
-              "\n            ",
+              "\r\n            ",
               {
                 "tag": "span",
                 "props": {
@@ -2251,7 +2251,7 @@
                   "Escola de Esportes"
                 ]
               },
-              "\n            ",
+              "\r\n            ",
               {
                 "tag": "h1",
                 "props": {},
@@ -2259,7 +2259,7 @@
                   "Iniciação Esportiva"
                 ]
               },
-              "\n            ",
+              "\r\n            ",
               {
                 "tag": "p",
                 "props": {},
@@ -2267,13 +2267,13 @@
                   "Conheça Iniciação Esportiva no Programa Viva o Esporte de Betim."
                 ]
               },
-              "\n        "
+              "\r\n        "
             ]
           },
-          "\n    "
+          "\r\n    "
         ]
       },
-      "\n    ",
+      "\r\n    ",
       {
         "tag": "main",
         "props": {
@@ -2282,7 +2282,7 @@
           "tabindex": "-1"
         },
         "children": [
-          "\n        ",
+          "\r\n        ",
           {
             "tag": "nav",
             "props": {
@@ -2318,19 +2318,19 @@
               }
             ]
           },
-          "\n        ",
+          "\r\n        ",
           {
             "tag": "div",
             "props": {
               "class": "modalidade-layout"
             },
             "children": [
-              "\n            ",
+              "\r\n            ",
               {
                 "tag": "div",
                 "props": {},
                 "children": [
-                  "\n                ",
+                  "\r\n                ",
                   {
                     "tag": "section",
                     "props": {
@@ -2394,7 +2394,7 @@
                       }
                     ]
                   },
-                  "\n                ",
+                  "\r\n                ",
                   {
                     "tag": "section",
                     "props": {
@@ -2408,7 +2408,7 @@
                           "Galeria de fotos oficiais"
                         ]
                       },
-                      "\n                    ",
+                      "\r\n                    ",
                       {
                         "tag": "div",
                         "props": {
@@ -2425,10 +2425,10 @@
                           }
                         ]
                       },
-                      "\n                "
+                      "\r\n                "
                     ]
                   },
-                  "\n                ",
+                  "\r\n                ",
                   {
                     "tag": "section",
                     "props": {
@@ -2442,7 +2442,7 @@
                           "Fonte e informações atualizadas"
                         ]
                       },
-                      "\n                    ",
+                      "\r\n                    ",
                       {
                         "tag": "a",
                         "props": {
@@ -2452,7 +2452,7 @@
                           "Consultar a publicação oficial da Prefeitura de Betim"
                         ]
                       },
-                      "\n                    ",
+                      "\r\n                    ",
                       {
                         "tag": "p",
                         "props": {
@@ -2462,13 +2462,13 @@
                           "Fonte consultada em 11/11/2026. A oferta pode mudar."
                         ]
                       },
-                      "\n                "
+                      "\r\n                "
                     ]
                   },
-                  "\n            "
+                  "\r\n            "
                 ]
               },
-              "\n            ",
+              "\r\n            ",
               {
                 "tag": "aside",
                 "props": {
@@ -2476,7 +2476,7 @@
                   "aria-label": "Participação e agenda"
                 },
                 "children": [
-                  "\n                ",
+                  "\r\n                ",
                   {
                     "tag": "section",
                     "props": {
@@ -2490,7 +2490,7 @@
                           "Como participar"
                         ]
                       },
-                      "\n                    ",
+                      "\r\n                    ",
                       {
                         "tag": "p",
                         "props": {},
@@ -2498,7 +2498,7 @@
                           "Procure o núcleo de interesse para confirmar as condições de participação antes de realizar a inscrição."
                         ]
                       },
-                      "\n                    ",
+                      "\r\n                    ",
                       {
                         "tag": "h3",
                         "props": {},
@@ -2513,7 +2513,7 @@
                           "Confirme a faixa etária, os documentos exigidos, os horários e as vagas com o núcleo responsável."
                         ]
                       },
-                      "\n                    ",
+                      "\r\n                    ",
                       {
                         "tag": "a",
                         "props": {
@@ -2526,10 +2526,10 @@
                           "Consultar participação"
                         ]
                       },
-                      "\n                "
+                      "\r\n                "
                     ]
                   },
-                  "\n                ",
+                  "\r\n                ",
                   {
                     "tag": "section",
                     "props": {
@@ -2562,13 +2562,13 @@
                       }
                     ]
                   },
-                  "\n            "
+                  "\r\n            "
                 ]
               },
-              "\n        "
+              "\r\n        "
             ]
           },
-          "\n        ",
+          "\r\n        ",
           {
             "tag": "a",
             "props": {
@@ -2579,10 +2579,10 @@
               "← Voltar às modalidades"
             ]
           },
-          "\n    "
+          "\r\n    "
         ]
       },
-      "\n    ",
+      "\r\n    ",
       {
         "tag": "footer",
         "props": {
@@ -2607,14 +2607,14 @@
           }
         ]
       },
-      "\n"
+      "\r\n"
     ],
     "locations": []
   },
   "atletismo": {
     "title": "Atletismo — Portal do Esporte Betim",
     "nodes": [
-      "\n    ",
+      "\r\n    ",
       {
         "tag": "a",
         "props": {
@@ -2625,21 +2625,21 @@
           "Ir para o conteúdo"
         ]
       },
-      "\n    \n    ",
+      "\r\n    \r\n    ",
       {
         "tag": "header",
         "props": {
           "class": "modalidade-hero"
         },
         "children": [
-          "\n        ",
+          "\r\n        ",
           {
             "tag": "div",
             "props": {
               "class": "modalidade-hero-inner"
             },
             "children": [
-              "\n            ",
+              "\r\n            ",
               {
                 "tag": "span",
                 "props": {
@@ -2649,7 +2649,7 @@
                   "Escola de Esportes"
                 ]
               },
-              "\n            ",
+              "\r\n            ",
               {
                 "tag": "h1",
                 "props": {},
@@ -2657,7 +2657,7 @@
                   "Atletismo"
                 ]
               },
-              "\n            ",
+              "\r\n            ",
               {
                 "tag": "p",
                 "props": {},
@@ -2665,13 +2665,13 @@
                   "Conheça Atletismo no Programa Viva o Esporte de Betim."
                 ]
               },
-              "\n        "
+              "\r\n        "
             ]
           },
-          "\n    "
+          "\r\n    "
         ]
       },
-      "\n    ",
+      "\r\n    ",
       {
         "tag": "main",
         "props": {
@@ -2680,7 +2680,7 @@
           "tabindex": "-1"
         },
         "children": [
-          "\n        ",
+          "\r\n        ",
           {
             "tag": "nav",
             "props": {
@@ -2716,19 +2716,19 @@
               }
             ]
           },
-          "\n        ",
+          "\r\n        ",
           {
             "tag": "div",
             "props": {
               "class": "modalidade-layout"
             },
             "children": [
-              "\n            ",
+              "\r\n            ",
               {
                 "tag": "div",
                 "props": {},
                 "children": [
-                  "\n                ",
+                  "\r\n                ",
                   {
                     "tag": "section",
                     "props": {
@@ -2785,7 +2785,7 @@
                       }
                     ]
                   },
-                  "\n                ",
+                  "\r\n                ",
                   {
                     "tag": "section",
                     "props": {
@@ -2799,7 +2799,7 @@
                           "Galeria de fotos oficiais"
                         ]
                       },
-                      "\n                    ",
+                      "\r\n                    ",
                       {
                         "tag": "div",
                         "props": {
@@ -2816,10 +2816,10 @@
                           }
                         ]
                       },
-                      "\n                "
+                      "\r\n                "
                     ]
                   },
-                  "\n                ",
+                  "\r\n                ",
                   {
                     "tag": "section",
                     "props": {
@@ -2833,7 +2833,7 @@
                           "Fonte e informações atualizadas"
                         ]
                       },
-                      "\n                    ",
+                      "\r\n                    ",
                       {
                         "tag": "a",
                         "props": {
@@ -2843,7 +2843,7 @@
                           "Consultar a publicação oficial da Prefeitura de Betim"
                         ]
                       },
-                      "\n                    ",
+                      "\r\n                    ",
                       {
                         "tag": "p",
                         "props": {
@@ -2853,13 +2853,13 @@
                           "Fonte consultada em 11/11/2026. A oferta pode mudar."
                         ]
                       },
-                      "\n                "
+                      "\r\n                "
                     ]
                   },
-                  "\n            "
+                  "\r\n            "
                 ]
               },
-              "\n            ",
+              "\r\n            ",
               {
                 "tag": "aside",
                 "props": {
@@ -2867,7 +2867,7 @@
                   "aria-label": "Participação e agenda"
                 },
                 "children": [
-                  "\n                ",
+                  "\r\n                ",
                   {
                     "tag": "section",
                     "props": {
@@ -2881,7 +2881,7 @@
                           "Como participar"
                         ]
                       },
-                      "\n                    ",
+                      "\r\n                    ",
                       {
                         "tag": "p",
                         "props": {},
@@ -2889,7 +2889,7 @@
                           "Procure o núcleo de interesse para confirmar as condições de participação antes de realizar a inscrição."
                         ]
                       },
-                      "\n                    ",
+                      "\r\n                    ",
                       {
                         "tag": "h3",
                         "props": {},
@@ -2904,7 +2904,7 @@
                           "Confirme a faixa etária, os documentos exigidos, os horários e as vagas com o núcleo responsável."
                         ]
                       },
-                      "\n                    ",
+                      "\r\n                    ",
                       {
                         "tag": "a",
                         "props": {
@@ -2917,10 +2917,10 @@
                           "Consultar participação"
                         ]
                       },
-                      "\n                "
+                      "\r\n                "
                     ]
                   },
-                  "\n                ",
+                  "\r\n                ",
                   {
                     "tag": "section",
                     "props": {
@@ -2953,13 +2953,13 @@
                       }
                     ]
                   },
-                  "\n            "
+                  "\r\n            "
                 ]
               },
-              "\n        "
+              "\r\n        "
             ]
           },
-          "\n        ",
+          "\r\n        ",
           {
             "tag": "a",
             "props": {
@@ -2970,10 +2970,10 @@
               "← Voltar às modalidades"
             ]
           },
-          "\n    "
+          "\r\n    "
         ]
       },
-      "\n    ",
+      "\r\n    ",
       {
         "tag": "footer",
         "props": {
@@ -2998,14 +2998,14 @@
           }
         ]
       },
-      "\n"
+      "\r\n"
     ],
     "locations": []
   },
   "atletismo-adaptado": {
     "title": "Atletismo Adaptado (PCD/AFA) — Portal do Esporte Betim",
     "nodes": [
-      "\n    ",
+      "\r\n    ",
       {
         "tag": "a",
         "props": {
@@ -3016,21 +3016,21 @@
           "Ir para o conteúdo"
         ]
       },
-      "\n    \n    ",
+      "\r\n    \r\n    ",
       {
         "tag": "header",
         "props": {
           "class": "modalidade-hero"
         },
         "children": [
-          "\n        ",
+          "\r\n        ",
           {
             "tag": "div",
             "props": {
               "class": "modalidade-hero-inner"
             },
             "children": [
-              "\n            ",
+              "\r\n            ",
               {
                 "tag": "span",
                 "props": {
@@ -3040,7 +3040,7 @@
                   "Escola de Esportes"
                 ]
               },
-              "\n            ",
+              "\r\n            ",
               {
                 "tag": "h1",
                 "props": {},
@@ -3048,7 +3048,7 @@
                   "Atletismo Adaptado (PCD/AFA)"
                 ]
               },
-              "\n            ",
+              "\r\n            ",
               {
                 "tag": "p",
                 "props": {},
@@ -3056,13 +3056,13 @@
                   "Conheça Atletismo Adaptado (PCD/AFA) no Programa Viva o Esporte de Betim."
                 ]
               },
-              "\n        "
+              "\r\n        "
             ]
           },
-          "\n    "
+          "\r\n    "
         ]
       },
-      "\n    ",
+      "\r\n    ",
       {
         "tag": "main",
         "props": {
@@ -3071,7 +3071,7 @@
           "tabindex": "-1"
         },
         "children": [
-          "\n        ",
+          "\r\n        ",
           {
             "tag": "nav",
             "props": {
@@ -3107,19 +3107,19 @@
               }
             ]
           },
-          "\n        ",
+          "\r\n        ",
           {
             "tag": "div",
             "props": {
               "class": "modalidade-layout"
             },
             "children": [
-              "\n            ",
+              "\r\n            ",
               {
                 "tag": "div",
                 "props": {},
                 "children": [
-                  "\n                ",
+                  "\r\n                ",
                   {
                     "tag": "section",
                     "props": {
@@ -3176,7 +3176,7 @@
                       }
                     ]
                   },
-                  "\n                ",
+                  "\r\n                ",
                   {
                     "tag": "section",
                     "props": {
@@ -3190,7 +3190,7 @@
                           "Galeria de fotos oficiais"
                         ]
                       },
-                      "\n                    ",
+                      "\r\n                    ",
                       {
                         "tag": "div",
                         "props": {
@@ -3207,10 +3207,10 @@
                           }
                         ]
                       },
-                      "\n                "
+                      "\r\n                "
                     ]
                   },
-                  "\n                ",
+                  "\r\n                ",
                   {
                     "tag": "section",
                     "props": {
@@ -3224,7 +3224,7 @@
                           "Fonte e informações atualizadas"
                         ]
                       },
-                      "\n                    ",
+                      "\r\n                    ",
                       {
                         "tag": "a",
                         "props": {
@@ -3234,7 +3234,7 @@
                           "Consultar a publicação oficial da Prefeitura de Betim"
                         ]
                       },
-                      "\n                    ",
+                      "\r\n                    ",
                       {
                         "tag": "p",
                         "props": {
@@ -3244,13 +3244,13 @@
                           "Fonte consultada em 11/11/2026. A oferta pode mudar."
                         ]
                       },
-                      "\n                "
+                      "\r\n                "
                     ]
                   },
-                  "\n            "
+                  "\r\n            "
                 ]
               },
-              "\n            ",
+              "\r\n            ",
               {
                 "tag": "aside",
                 "props": {
@@ -3258,7 +3258,7 @@
                   "aria-label": "Participação e agenda"
                 },
                 "children": [
-                  "\n                ",
+                  "\r\n                ",
                   {
                     "tag": "section",
                     "props": {
@@ -3272,7 +3272,7 @@
                           "Como participar"
                         ]
                       },
-                      "\n                    ",
+                      "\r\n                    ",
                       {
                         "tag": "p",
                         "props": {},
@@ -3280,7 +3280,7 @@
                           "Procure o núcleo de interesse para confirmar as condições de participação antes de realizar a inscrição."
                         ]
                       },
-                      "\n                    ",
+                      "\r\n                    ",
                       {
                         "tag": "h3",
                         "props": {},
@@ -3295,7 +3295,7 @@
                           "Confirme a faixa etária, os documentos exigidos, os horários e as vagas com o núcleo responsável."
                         ]
                       },
-                      "\n                    ",
+                      "\r\n                    ",
                       {
                         "tag": "a",
                         "props": {
@@ -3308,10 +3308,10 @@
                           "Consultar participação"
                         ]
                       },
-                      "\n                "
+                      "\r\n                "
                     ]
                   },
-                  "\n                ",
+                  "\r\n                ",
                   {
                     "tag": "section",
                     "props": {
@@ -3344,13 +3344,13 @@
                       }
                     ]
                   },
-                  "\n            "
+                  "\r\n            "
                 ]
               },
-              "\n        "
+              "\r\n        "
             ]
           },
-          "\n        ",
+          "\r\n        ",
           {
             "tag": "a",
             "props": {
@@ -3361,10 +3361,10 @@
               "← Voltar às modalidades"
             ]
           },
-          "\n    "
+          "\r\n    "
         ]
       },
-      "\n    ",
+      "\r\n    ",
       {
         "tag": "footer",
         "props": {
@@ -3389,14 +3389,14 @@
           }
         ]
       },
-      "\n"
+      "\r\n"
     ],
     "locations": []
   },
   "taekwondo": {
     "title": "Taekwondo — Portal do Esporte Betim",
     "nodes": [
-      "\n    ",
+      "\r\n    ",
       {
         "tag": "a",
         "props": {
@@ -3407,21 +3407,21 @@
           "Ir para o conteúdo"
         ]
       },
-      "\n    \n    ",
+      "\r\n    \r\n    ",
       {
         "tag": "header",
         "props": {
           "class": "modalidade-hero"
         },
         "children": [
-          "\n        ",
+          "\r\n        ",
           {
             "tag": "div",
             "props": {
               "class": "modalidade-hero-inner"
             },
             "children": [
-              "\n            ",
+              "\r\n            ",
               {
                 "tag": "span",
                 "props": {
@@ -3431,7 +3431,7 @@
                   "Escola de Esportes"
                 ]
               },
-              "\n            ",
+              "\r\n            ",
               {
                 "tag": "h1",
                 "props": {},
@@ -3439,7 +3439,7 @@
                   "Taekwondo"
                 ]
               },
-              "\n            ",
+              "\r\n            ",
               {
                 "tag": "p",
                 "props": {},
@@ -3447,13 +3447,13 @@
                   "Conheça Taekwondo no Programa Viva o Esporte de Betim."
                 ]
               },
-              "\n        "
+              "\r\n        "
             ]
           },
-          "\n    "
+          "\r\n    "
         ]
       },
-      "\n    ",
+      "\r\n    ",
       {
         "tag": "main",
         "props": {
@@ -3462,7 +3462,7 @@
           "tabindex": "-1"
         },
         "children": [
-          "\n        ",
+          "\r\n        ",
           {
             "tag": "nav",
             "props": {
@@ -3498,19 +3498,19 @@
               }
             ]
           },
-          "\n        ",
+          "\r\n        ",
           {
             "tag": "div",
             "props": {
               "class": "modalidade-layout"
             },
             "children": [
-              "\n            ",
+              "\r\n            ",
               {
                 "tag": "div",
                 "props": {},
                 "children": [
-                  "\n                ",
+                  "\r\n                ",
                   {
                     "tag": "section",
                     "props": {
@@ -3581,7 +3581,7 @@
                       }
                     ]
                   },
-                  "\n                ",
+                  "\r\n                ",
                   {
                     "tag": "section",
                     "props": {
@@ -3595,7 +3595,7 @@
                           "Galeria de fotos oficiais"
                         ]
                       },
-                      "\n                    ",
+                      "\r\n                    ",
                       {
                         "tag": "div",
                         "props": {
@@ -3612,10 +3612,10 @@
                           }
                         ]
                       },
-                      "\n                "
+                      "\r\n                "
                     ]
                   },
-                  "\n                ",
+                  "\r\n                ",
                   {
                     "tag": "section",
                     "props": {
@@ -3629,7 +3629,7 @@
                           "Fonte e informações atualizadas"
                         ]
                       },
-                      "\n                    ",
+                      "\r\n                    ",
                       {
                         "tag": "a",
                         "props": {
@@ -3639,7 +3639,7 @@
                           "Consultar a publicação oficial da Prefeitura de Betim"
                         ]
                       },
-                      "\n                    ",
+                      "\r\n                    ",
                       {
                         "tag": "p",
                         "props": {
@@ -3649,13 +3649,13 @@
                           "Fonte consultada em 11/11/2026. A oferta pode mudar."
                         ]
                       },
-                      "\n                "
+                      "\r\n                "
                     ]
                   },
-                  "\n            "
+                  "\r\n            "
                 ]
               },
-              "\n            ",
+              "\r\n            ",
               {
                 "tag": "aside",
                 "props": {
@@ -3663,7 +3663,7 @@
                   "aria-label": "Participação e agenda"
                 },
                 "children": [
-                  "\n                ",
+                  "\r\n                ",
                   {
                     "tag": "section",
                     "props": {
@@ -3677,7 +3677,7 @@
                           "Como participar"
                         ]
                       },
-                      "\n                    ",
+                      "\r\n                    ",
                       {
                         "tag": "p",
                         "props": {},
@@ -3685,7 +3685,7 @@
                           "Procure o núcleo de interesse para confirmar as condições de participação antes de realizar a inscrição."
                         ]
                       },
-                      "\n                    ",
+                      "\r\n                    ",
                       {
                         "tag": "h3",
                         "props": {},
@@ -3700,7 +3700,7 @@
                           "Confirme a faixa etária, os documentos exigidos, os horários e as vagas com o núcleo responsável."
                         ]
                       },
-                      "\n                    ",
+                      "\r\n                    ",
                       {
                         "tag": "a",
                         "props": {
@@ -3713,10 +3713,10 @@
                           "Consultar participação"
                         ]
                       },
-                      "\n                "
+                      "\r\n                "
                     ]
                   },
-                  "\n                ",
+                  "\r\n                ",
                   {
                     "tag": "section",
                     "props": {
@@ -3749,13 +3749,13 @@
                       }
                     ]
                   },
-                  "\n            "
+                  "\r\n            "
                 ]
               },
-              "\n        "
+              "\r\n        "
             ]
           },
-          "\n        ",
+          "\r\n        ",
           {
             "tag": "a",
             "props": {
@@ -3766,10 +3766,10 @@
               "← Voltar às modalidades"
             ]
           },
-          "\n    "
+          "\r\n    "
         ]
       },
-      "\n    ",
+      "\r\n    ",
       {
         "tag": "footer",
         "props": {
@@ -3794,14 +3794,14 @@
           }
         ]
       },
-      "\n"
+      "\r\n"
     ],
     "locations": []
   },
   "hidroginastica": {
     "title": "Hidroginástica — Portal do Esporte Betim",
     "nodes": [
-      "\n    ",
+      "\r\n    ",
       {
         "tag": "a",
         "props": {
@@ -3812,21 +3812,21 @@
           "Ir para o conteúdo"
         ]
       },
-      "\n    \n    ",
+      "\r\n    \r\n    ",
       {
         "tag": "header",
         "props": {
           "class": "modalidade-hero"
         },
         "children": [
-          "\n        ",
+          "\r\n        ",
           {
             "tag": "div",
             "props": {
               "class": "modalidade-hero-inner"
             },
             "children": [
-              "\n            ",
+              "\r\n            ",
               {
                 "tag": "span",
                 "props": {
@@ -3836,7 +3836,7 @@
                   "Escola de Esportes"
                 ]
               },
-              "\n            ",
+              "\r\n            ",
               {
                 "tag": "h1",
                 "props": {},
@@ -3844,7 +3844,7 @@
                   "Hidroginástica"
                 ]
               },
-              "\n            ",
+              "\r\n            ",
               {
                 "tag": "p",
                 "props": {},
@@ -3852,13 +3852,13 @@
                   "Conheça Hidroginástica no Programa Viva o Esporte de Betim."
                 ]
               },
-              "\n        "
+              "\r\n        "
             ]
           },
-          "\n    "
+          "\r\n    "
         ]
       },
-      "\n    ",
+      "\r\n    ",
       {
         "tag": "main",
         "props": {
@@ -3867,7 +3867,7 @@
           "tabindex": "-1"
         },
         "children": [
-          "\n        ",
+          "\r\n        ",
           {
             "tag": "nav",
             "props": {
@@ -3903,19 +3903,19 @@
               }
             ]
           },
-          "\n        ",
+          "\r\n        ",
           {
             "tag": "div",
             "props": {
               "class": "modalidade-layout"
             },
             "children": [
-              "\n            ",
+              "\r\n            ",
               {
                 "tag": "div",
                 "props": {},
                 "children": [
-                  "\n                ",
+                  "\r\n                ",
                   {
                     "tag": "section",
                     "props": {
@@ -3972,7 +3972,7 @@
                       }
                     ]
                   },
-                  "\n                ",
+                  "\r\n                ",
                   {
                     "tag": "section",
                     "props": {
@@ -3986,7 +3986,7 @@
                           "Galeria de fotos oficiais"
                         ]
                       },
-                      "\n                    ",
+                      "\r\n                    ",
                       {
                         "tag": "div",
                         "props": {
@@ -4003,10 +4003,10 @@
                           }
                         ]
                       },
-                      "\n                "
+                      "\r\n                "
                     ]
                   },
-                  "\n                ",
+                  "\r\n                ",
                   {
                     "tag": "section",
                     "props": {
@@ -4020,7 +4020,7 @@
                           "Fonte e informações atualizadas"
                         ]
                       },
-                      "\n                    ",
+                      "\r\n                    ",
                       {
                         "tag": "a",
                         "props": {
@@ -4030,7 +4030,7 @@
                           "Consultar a publicação oficial da Prefeitura de Betim"
                         ]
                       },
-                      "\n                    ",
+                      "\r\n                    ",
                       {
                         "tag": "p",
                         "props": {
@@ -4040,13 +4040,13 @@
                           "Fonte consultada em 11/11/2026. A oferta pode mudar."
                         ]
                       },
-                      "\n                "
+                      "\r\n                "
                     ]
                   },
-                  "\n            "
+                  "\r\n            "
                 ]
               },
-              "\n            ",
+              "\r\n            ",
               {
                 "tag": "aside",
                 "props": {
@@ -4054,7 +4054,7 @@
                   "aria-label": "Participação e agenda"
                 },
                 "children": [
-                  "\n                ",
+                  "\r\n                ",
                   {
                     "tag": "section",
                     "props": {
@@ -4068,7 +4068,7 @@
                           "Como participar"
                         ]
                       },
-                      "\n                    ",
+                      "\r\n                    ",
                       {
                         "tag": "p",
                         "props": {},
@@ -4076,7 +4076,7 @@
                           "Procure o núcleo de interesse para confirmar as condições de participação antes de realizar a inscrição."
                         ]
                       },
-                      "\n                    ",
+                      "\r\n                    ",
                       {
                         "tag": "h3",
                         "props": {},
@@ -4091,7 +4091,7 @@
                           "Confirme a faixa etária, os documentos exigidos, os horários e as vagas com o núcleo responsável."
                         ]
                       },
-                      "\n                    ",
+                      "\r\n                    ",
                       {
                         "tag": "a",
                         "props": {
@@ -4104,10 +4104,10 @@
                           "Consultar participação"
                         ]
                       },
-                      "\n                "
+                      "\r\n                "
                     ]
                   },
-                  "\n                ",
+                  "\r\n                ",
                   {
                     "tag": "section",
                     "props": {
@@ -4140,13 +4140,13 @@
                       }
                     ]
                   },
-                  "\n            "
+                  "\r\n            "
                 ]
               },
-              "\n        "
+              "\r\n        "
             ]
           },
-          "\n        ",
+          "\r\n        ",
           {
             "tag": "a",
             "props": {
@@ -4157,10 +4157,10 @@
               "← Voltar às modalidades"
             ]
           },
-          "\n    "
+          "\r\n    "
         ]
       },
-      "\n    ",
+      "\r\n    ",
       {
         "tag": "footer",
         "props": {
@@ -4185,7 +4185,7 @@
           }
         ]
       },
-      "\n"
+      "\r\n"
     ],
     "locations": []
   },
@@ -4832,7 +4832,7 @@
   "ginastica-para-todos": {
     "title": "Ginástica para Todos — Portal do Esporte Betim",
     "nodes": [
-      "\n    ",
+      "\r\n    ",
       {
         "tag": "a",
         "props": {
@@ -4843,21 +4843,21 @@
           "Ir para o conteúdo"
         ]
       },
-      "\n    \n    ",
+      "\r\n    \r\n    ",
       {
         "tag": "header",
         "props": {
           "class": "modalidade-hero"
         },
         "children": [
-          "\n        ",
+          "\r\n        ",
           {
             "tag": "div",
             "props": {
               "class": "modalidade-hero-inner"
             },
             "children": [
-              "\n            ",
+              "\r\n            ",
               {
                 "tag": "span",
                 "props": {
@@ -4867,7 +4867,7 @@
                   "Escola de Esportes"
                 ]
               },
-              "\n            ",
+              "\r\n            ",
               {
                 "tag": "h1",
                 "props": {},
@@ -4875,7 +4875,7 @@
                   "Ginástica para Todos"
                 ]
               },
-              "\n            ",
+              "\r\n            ",
               {
                 "tag": "p",
                 "props": {},
@@ -4883,13 +4883,13 @@
                   "Conheça Ginástica para Todos no Programa Viva o Esporte de Betim."
                 ]
               },
-              "\n        "
+              "\r\n        "
             ]
           },
-          "\n    "
+          "\r\n    "
         ]
       },
-      "\n    ",
+      "\r\n    ",
       {
         "tag": "main",
         "props": {
@@ -4898,7 +4898,7 @@
           "tabindex": "-1"
         },
         "children": [
-          "\n        ",
+          "\r\n        ",
           {
             "tag": "nav",
             "props": {
@@ -4934,19 +4934,19 @@
               }
             ]
           },
-          "\n        ",
+          "\r\n        ",
           {
             "tag": "div",
             "props": {
               "class": "modalidade-layout"
             },
             "children": [
-              "\n            ",
+              "\r\n            ",
               {
                 "tag": "div",
                 "props": {},
                 "children": [
-                  "\n                ",
+                  "\r\n                ",
                   {
                     "tag": "section",
                     "props": {
@@ -5024,7 +5024,7 @@
                       }
                     ]
                   },
-                  "\n                ",
+                  "\r\n                ",
                   {
                     "tag": "section",
                     "props": {
@@ -5038,7 +5038,7 @@
                           "Galeria de fotos oficiais"
                         ]
                       },
-                      "\n                    ",
+                      "\r\n                    ",
                       {
                         "tag": "div",
                         "props": {
@@ -5055,10 +5055,10 @@
                           }
                         ]
                       },
-                      "\n                "
+                      "\r\n                "
                     ]
                   },
-                  "\n                ",
+                  "\r\n                ",
                   {
                     "tag": "section",
                     "props": {
@@ -5072,7 +5072,7 @@
                           "Fonte e informações atualizadas"
                         ]
                       },
-                      "\n                    ",
+                      "\r\n                    ",
                       {
                         "tag": "a",
                         "props": {
@@ -5082,7 +5082,7 @@
                           "Consultar a publicação oficial da Prefeitura de Betim"
                         ]
                       },
-                      "\n                    ",
+                      "\r\n                    ",
                       {
                         "tag": "p",
                         "props": {
@@ -5092,13 +5092,13 @@
                           "Fonte consultada em 11/11/2026. A oferta pode mudar."
                         ]
                       },
-                      "\n                "
+                      "\r\n                "
                     ]
                   },
-                  "\n            "
+                  "\r\n            "
                 ]
               },
-              "\n            ",
+              "\r\n            ",
               {
                 "tag": "aside",
                 "props": {
@@ -5106,7 +5106,7 @@
                   "aria-label": "Participação e agenda"
                 },
                 "children": [
-                  "\n                ",
+                  "\r\n                ",
                   {
                     "tag": "section",
                     "props": {
@@ -5120,7 +5120,7 @@
                           "Como participar"
                         ]
                       },
-                      "\n                    ",
+                      "\r\n                    ",
                       {
                         "tag": "p",
                         "props": {},
@@ -5128,7 +5128,7 @@
                           "Procure o núcleo de interesse para confirmar as condições de participação antes de realizar a inscrição."
                         ]
                       },
-                      "\n                    ",
+                      "\r\n                    ",
                       {
                         "tag": "h3",
                         "props": {},
@@ -5143,7 +5143,7 @@
                           "Confirme a faixa etária, os documentos exigidos, os horários e as vagas com o núcleo responsável."
                         ]
                       },
-                      "\n                    ",
+                      "\r\n                    ",
                       {
                         "tag": "a",
                         "props": {
@@ -5156,10 +5156,10 @@
                           "Consultar participação"
                         ]
                       },
-                      "\n                "
+                      "\r\n                "
                     ]
                   },
-                  "\n                ",
+                  "\r\n                ",
                   {
                     "tag": "section",
                     "props": {
@@ -5192,13 +5192,13 @@
                       }
                     ]
                   },
-                  "\n            "
+                  "\r\n            "
                 ]
               },
-              "\n        "
+              "\r\n        "
             ]
           },
-          "\n        ",
+          "\r\n        ",
           {
             "tag": "a",
             "props": {
@@ -5209,10 +5209,10 @@
               "← Voltar às modalidades"
             ]
           },
-          "\n    "
+          "\r\n    "
         ]
       },
-      "\n    ",
+      "\r\n    ",
       {
         "tag": "footer",
         "props": {
@@ -5237,14 +5237,14 @@
           }
         ]
       },
-      "\n"
+      "\r\n"
     ],
     "locations": []
   },
   "lian-gong": {
     "title": "Lian Gong — Portal do Esporte Betim",
     "nodes": [
-      "\n    ",
+      "\r\n    ",
       {
         "tag": "a",
         "props": {
@@ -5255,21 +5255,21 @@
           "Ir para o conteúdo"
         ]
       },
-      "\n    \n    ",
+      "\r\n    \r\n    ",
       {
         "tag": "header",
         "props": {
           "class": "modalidade-hero"
         },
         "children": [
-          "\n        ",
+          "\r\n        ",
           {
             "tag": "div",
             "props": {
               "class": "modalidade-hero-inner"
             },
             "children": [
-              "\n            ",
+              "\r\n            ",
               {
                 "tag": "span",
                 "props": {
@@ -5279,7 +5279,7 @@
                   "Escola de Esportes"
                 ]
               },
-              "\n            ",
+              "\r\n            ",
               {
                 "tag": "h1",
                 "props": {},
@@ -5287,7 +5287,7 @@
                   "Lian Gong"
                 ]
               },
-              "\n            ",
+              "\r\n            ",
               {
                 "tag": "p",
                 "props": {},
@@ -5295,13 +5295,13 @@
                   "Conheça Lian Gong no Programa Viva o Esporte de Betim."
                 ]
               },
-              "\n        "
+              "\r\n        "
             ]
           },
-          "\n    "
+          "\r\n    "
         ]
       },
-      "\n    ",
+      "\r\n    ",
       {
         "tag": "main",
         "props": {
@@ -5310,7 +5310,7 @@
           "tabindex": "-1"
         },
         "children": [
-          "\n        ",
+          "\r\n        ",
           {
             "tag": "nav",
             "props": {
@@ -5346,19 +5346,19 @@
               }
             ]
           },
-          "\n        ",
+          "\r\n        ",
           {
             "tag": "div",
             "props": {
               "class": "modalidade-layout"
             },
             "children": [
-              "\n            ",
+              "\r\n            ",
               {
                 "tag": "div",
                 "props": {},
                 "children": [
-                  "\n                ",
+                  "\r\n                ",
                   {
                     "tag": "section",
                     "props": {
@@ -5408,7 +5408,7 @@
                       }
                     ]
                   },
-                  "\n                ",
+                  "\r\n                ",
                   {
                     "tag": "section",
                     "props": {
@@ -5422,7 +5422,7 @@
                           "Galeria de fotos oficiais"
                         ]
                       },
-                      "\n                    ",
+                      "\r\n                    ",
                       {
                         "tag": "div",
                         "props": {
@@ -5439,10 +5439,10 @@
                           }
                         ]
                       },
-                      "\n                "
+                      "\r\n                "
                     ]
                   },
-                  "\n                ",
+                  "\r\n                ",
                   {
                     "tag": "section",
                     "props": {
@@ -5456,7 +5456,7 @@
                           "Fonte e informações atualizadas"
                         ]
                       },
-                      "\n                    ",
+                      "\r\n                    ",
                       {
                         "tag": "a",
                         "props": {
@@ -5466,7 +5466,7 @@
                           "Consultar a publicação oficial da Prefeitura de Betim"
                         ]
                       },
-                      "\n                    ",
+                      "\r\n                    ",
                       {
                         "tag": "p",
                         "props": {
@@ -5476,13 +5476,13 @@
                           "Fonte consultada em 11/11/2026. A oferta pode mudar."
                         ]
                       },
-                      "\n                "
+                      "\r\n                "
                     ]
                   },
-                  "\n            "
+                  "\r\n            "
                 ]
               },
-              "\n            ",
+              "\r\n            ",
               {
                 "tag": "aside",
                 "props": {
@@ -5490,7 +5490,7 @@
                   "aria-label": "Participação e agenda"
                 },
                 "children": [
-                  "\n                ",
+                  "\r\n                ",
                   {
                     "tag": "section",
                     "props": {
@@ -5504,7 +5504,7 @@
                           "Como participar"
                         ]
                       },
-                      "\n                    ",
+                      "\r\n                    ",
                       {
                         "tag": "p",
                         "props": {},
@@ -5512,7 +5512,7 @@
                           "Procure o núcleo de interesse para confirmar as condições de participação antes de realizar a inscrição."
                         ]
                       },
-                      "\n                    ",
+                      "\r\n                    ",
                       {
                         "tag": "h3",
                         "props": {},
@@ -5527,7 +5527,7 @@
                           "Confirme a faixa etária, os documentos exigidos, os horários e as vagas com o núcleo responsável."
                         ]
                       },
-                      "\n                    ",
+                      "\r\n                    ",
                       {
                         "tag": "a",
                         "props": {
@@ -5540,10 +5540,10 @@
                           "Consultar participação"
                         ]
                       },
-                      "\n                "
+                      "\r\n                "
                     ]
                   },
-                  "\n                ",
+                  "\r\n                ",
                   {
                     "tag": "section",
                     "props": {
@@ -5576,13 +5576,13 @@
                       }
                     ]
                   },
-                  "\n            "
+                  "\r\n            "
                 ]
               },
-              "\n        "
+              "\r\n        "
             ]
           },
-          "\n        ",
+          "\r\n        ",
           {
             "tag": "a",
             "props": {
@@ -5593,10 +5593,10 @@
               "← Voltar às modalidades"
             ]
           },
-          "\n    "
+          "\r\n    "
         ]
       },
-      "\n    ",
+      "\r\n    ",
       {
         "tag": "footer",
         "props": {
@@ -5621,7 +5621,7 @@
           }
         ]
       },
-      "\n"
+      "\r\n"
     ],
     "locations": []
   },
@@ -6899,7 +6899,7 @@
   "bale": {
     "title": "Balé — Portal do Esporte Betim",
     "nodes": [
-      "\n    ",
+      "\r\n    ",
       {
         "tag": "a",
         "props": {
@@ -6910,21 +6910,21 @@
           "Ir para o conteúdo"
         ]
       },
-      "\n    \n    ",
+      "\r\n    \r\n    ",
       {
         "tag": "header",
         "props": {
           "class": "modalidade-hero"
         },
         "children": [
-          "\n        ",
+          "\r\n        ",
           {
             "tag": "div",
             "props": {
               "class": "modalidade-hero-inner"
             },
             "children": [
-              "\n            ",
+              "\r\n            ",
               {
                 "tag": "span",
                 "props": {
@@ -6934,7 +6934,7 @@
                   "Escola de Esportes"
                 ]
               },
-              "\n            ",
+              "\r\n            ",
               {
                 "tag": "h1",
                 "props": {},
@@ -6942,7 +6942,7 @@
                   "Balé"
                 ]
               },
-              "\n            ",
+              "\r\n            ",
               {
                 "tag": "p",
                 "props": {},
@@ -6950,13 +6950,13 @@
                   "Conheça Balé no Programa Viva o Esporte de Betim."
                 ]
               },
-              "\n        "
+              "\r\n        "
             ]
           },
-          "\n    "
+          "\r\n    "
         ]
       },
-      "\n    ",
+      "\r\n    ",
       {
         "tag": "main",
         "props": {
@@ -6965,7 +6965,7 @@
           "tabindex": "-1"
         },
         "children": [
-          "\n        ",
+          "\r\n        ",
           {
             "tag": "nav",
             "props": {
@@ -7001,19 +7001,19 @@
               }
             ]
           },
-          "\n        ",
+          "\r\n        ",
           {
             "tag": "div",
             "props": {
               "class": "modalidade-layout"
             },
             "children": [
-              "\n            ",
+              "\r\n            ",
               {
                 "tag": "div",
                 "props": {},
                 "children": [
-                  "\n                ",
+                  "\r\n                ",
                   {
                     "tag": "section",
                     "props": {
@@ -7063,7 +7063,7 @@
                       }
                     ]
                   },
-                  "\n                ",
+                  "\r\n                ",
                   {
                     "tag": "section",
                     "props": {
@@ -7077,7 +7077,7 @@
                           "Galeria de fotos oficiais"
                         ]
                       },
-                      "\n                    ",
+                      "\r\n                    ",
                       {
                         "tag": "div",
                         "props": {
@@ -7094,10 +7094,10 @@
                           }
                         ]
                       },
-                      "\n                "
+                      "\r\n                "
                     ]
                   },
-                  "\n                ",
+                  "\r\n                ",
                   {
                     "tag": "section",
                     "props": {
@@ -7111,7 +7111,7 @@
                           "Fonte e informações atualizadas"
                         ]
                       },
-                      "\n                    ",
+                      "\r\n                    ",
                       {
                         "tag": "a",
                         "props": {
@@ -7121,7 +7121,7 @@
                           "Consultar a publicação oficial da Prefeitura de Betim"
                         ]
                       },
-                      "\n                    ",
+                      "\r\n                    ",
                       {
                         "tag": "p",
                         "props": {
@@ -7131,13 +7131,13 @@
                           "Fonte consultada em 11/11/2026. A oferta pode mudar."
                         ]
                       },
-                      "\n                "
+                      "\r\n                "
                     ]
                   },
-                  "\n            "
+                  "\r\n            "
                 ]
               },
-              "\n            ",
+              "\r\n            ",
               {
                 "tag": "aside",
                 "props": {
@@ -7145,7 +7145,7 @@
                   "aria-label": "Participação e agenda"
                 },
                 "children": [
-                  "\n                ",
+                  "\r\n                ",
                   {
                     "tag": "section",
                     "props": {
@@ -7159,7 +7159,7 @@
                           "Como participar"
                         ]
                       },
-                      "\n                    ",
+                      "\r\n                    ",
                       {
                         "tag": "p",
                         "props": {},
@@ -7167,7 +7167,7 @@
                           "Procure o núcleo de interesse para confirmar as condições de participação antes de realizar a inscrição."
                         ]
                       },
-                      "\n                    ",
+                      "\r\n                    ",
                       {
                         "tag": "h3",
                         "props": {},
@@ -7182,7 +7182,7 @@
                           "Confirme a faixa etária, os documentos exigidos, os horários e as vagas com o núcleo responsável."
                         ]
                       },
-                      "\n                    ",
+                      "\r\n                    ",
                       {
                         "tag": "a",
                         "props": {
@@ -7195,10 +7195,10 @@
                           "Consultar participação"
                         ]
                       },
-                      "\n                "
+                      "\r\n                "
                     ]
                   },
-                  "\n                ",
+                  "\r\n                ",
                   {
                     "tag": "section",
                     "props": {
@@ -7231,13 +7231,13 @@
                       }
                     ]
                   },
-                  "\n            "
+                  "\r\n            "
                 ]
               },
-              "\n        "
+              "\r\n        "
             ]
           },
-          "\n        ",
+          "\r\n        ",
           {
             "tag": "a",
             "props": {
@@ -7248,10 +7248,10 @@
               "← Voltar às modalidades"
             ]
           },
-          "\n    "
+          "\r\n    "
         ]
       },
-      "\n    ",
+      "\r\n    ",
       {
         "tag": "footer",
         "props": {
@@ -7276,7 +7276,7 @@
           }
         ]
       },
-      "\n"
+      "\r\n"
     ],
     "locations": []
   },
@@ -7676,7 +7676,7 @@
   "zumba": {
     "title": "Zumba — Portal do Esporte Betim",
     "nodes": [
-      "\n    ",
+      "\r\n    ",
       {
         "tag": "a",
         "props": {
@@ -7687,21 +7687,21 @@
           "Ir para o conteúdo"
         ]
       },
-      "\n    \n    ",
+      "\r\n    \r\n    ",
       {
         "tag": "header",
         "props": {
           "class": "modalidade-hero"
         },
         "children": [
-          "\n        ",
+          "\r\n        ",
           {
             "tag": "div",
             "props": {
               "class": "modalidade-hero-inner"
             },
             "children": [
-              "\n            ",
+              "\r\n            ",
               {
                 "tag": "span",
                 "props": {
@@ -7711,7 +7711,7 @@
                   "Escola de Esportes"
                 ]
               },
-              "\n            ",
+              "\r\n            ",
               {
                 "tag": "h1",
                 "props": {},
@@ -7719,7 +7719,7 @@
                   "Zumba"
                 ]
               },
-              "\n            ",
+              "\r\n            ",
               {
                 "tag": "p",
                 "props": {},
@@ -7727,13 +7727,13 @@
                   "Conheça Zumba no Programa Viva o Esporte de Betim."
                 ]
               },
-              "\n        "
+              "\r\n        "
             ]
           },
-          "\n    "
+          "\r\n    "
         ]
       },
-      "\n    ",
+      "\r\n    ",
       {
         "tag": "main",
         "props": {
@@ -7742,7 +7742,7 @@
           "tabindex": "-1"
         },
         "children": [
-          "\n        ",
+          "\r\n        ",
           {
             "tag": "nav",
             "props": {
@@ -7778,19 +7778,19 @@
               }
             ]
           },
-          "\n        ",
+          "\r\n        ",
           {
             "tag": "div",
             "props": {
               "class": "modalidade-layout"
             },
             "children": [
-              "\n            ",
+              "\r\n            ",
               {
                 "tag": "div",
                 "props": {},
                 "children": [
-                  "\n                ",
+                  "\r\n                ",
                   {
                     "tag": "section",
                     "props": {
@@ -7840,7 +7840,7 @@
                       }
                     ]
                   },
-                  "\n                ",
+                  "\r\n                ",
                   {
                     "tag": "section",
                     "props": {
@@ -7854,7 +7854,7 @@
                           "Galeria de fotos oficiais"
                         ]
                       },
-                      "\n                    ",
+                      "\r\n                    ",
                       {
                         "tag": "div",
                         "props": {
@@ -7871,10 +7871,10 @@
                           }
                         ]
                       },
-                      "\n                "
+                      "\r\n                "
                     ]
                   },
-                  "\n                ",
+                  "\r\n                ",
                   {
                     "tag": "section",
                     "props": {
@@ -7888,7 +7888,7 @@
                           "Fonte e informações atualizadas"
                         ]
                       },
-                      "\n                    ",
+                      "\r\n                    ",
                       {
                         "tag": "a",
                         "props": {
@@ -7898,7 +7898,7 @@
                           "Consultar a publicação oficial da Prefeitura de Betim"
                         ]
                       },
-                      "\n                    ",
+                      "\r\n                    ",
                       {
                         "tag": "p",
                         "props": {
@@ -7908,13 +7908,13 @@
                           "Fonte consultada em 11/11/2026. A oferta pode mudar."
                         ]
                       },
-                      "\n                "
+                      "\r\n                "
                     ]
                   },
-                  "\n            "
+                  "\r\n            "
                 ]
               },
-              "\n            ",
+              "\r\n            ",
               {
                 "tag": "aside",
                 "props": {
@@ -7922,7 +7922,7 @@
                   "aria-label": "Participação e agenda"
                 },
                 "children": [
-                  "\n                ",
+                  "\r\n                ",
                   {
                     "tag": "section",
                     "props": {
@@ -7936,7 +7936,7 @@
                           "Como participar"
                         ]
                       },
-                      "\n                    ",
+                      "\r\n                    ",
                       {
                         "tag": "p",
                         "props": {},
@@ -7944,7 +7944,7 @@
                           "Procure o núcleo de interesse para confirmar as condições de participação antes de realizar a inscrição."
                         ]
                       },
-                      "\n                    ",
+                      "\r\n                    ",
                       {
                         "tag": "h3",
                         "props": {},
@@ -7959,7 +7959,7 @@
                           "Confirme a faixa etária, os documentos exigidos, os horários e as vagas com o núcleo responsável."
                         ]
                       },
-                      "\n                    ",
+                      "\r\n                    ",
                       {
                         "tag": "a",
                         "props": {
@@ -7972,10 +7972,10 @@
                           "Consultar participação"
                         ]
                       },
-                      "\n                "
+                      "\r\n                "
                     ]
                   },
-                  "\n                ",
+                  "\r\n                ",
                   {
                     "tag": "section",
                     "props": {
@@ -8008,13 +8008,13 @@
                       }
                     ]
                   },
-                  "\n            "
+                  "\r\n            "
                 ]
               },
-              "\n        "
+              "\r\n        "
             ]
           },
-          "\n        ",
+          "\r\n        ",
           {
             "tag": "a",
             "props": {
@@ -8025,10 +8025,10 @@
               "← Voltar às modalidades"
             ]
           },
-          "\n    "
+          "\r\n    "
         ]
       },
-      "\n    ",
+      "\r\n    ",
       {
         "tag": "footer",
         "props": {
@@ -8053,14 +8053,14 @@
           }
         ]
       },
-      "\n"
+      "\r\n"
     ],
     "locations": []
   },
   "ginastica-artistica": {
     "title": "Ginástica Artística — Portal do Esporte Betim",
     "nodes": [
-      "\n    ",
+      "\r\n    ",
       {
         "tag": "a",
         "props": {
@@ -8071,21 +8071,21 @@
           "Ir para o conteúdo"
         ]
       },
-      "\n    \n    ",
+      "\r\n    \r\n    ",
       {
         "tag": "header",
         "props": {
           "class": "modalidade-hero"
         },
         "children": [
-          "\n        ",
+          "\r\n        ",
           {
             "tag": "div",
             "props": {
               "class": "modalidade-hero-inner"
             },
             "children": [
-              "\n            ",
+              "\r\n            ",
               {
                 "tag": "span",
                 "props": {
@@ -8095,7 +8095,7 @@
                   "Escola de Esportes"
                 ]
               },
-              "\n            ",
+              "\r\n            ",
               {
                 "tag": "h1",
                 "props": {},
@@ -8103,7 +8103,7 @@
                   "Ginástica Artística"
                 ]
               },
-              "\n            ",
+              "\r\n            ",
               {
                 "tag": "p",
                 "props": {},
@@ -8111,13 +8111,13 @@
                   "Conheça Ginástica Artística no Programa Viva o Esporte de Betim."
                 ]
               },
-              "\n        "
+              "\r\n        "
             ]
           },
-          "\n    "
+          "\r\n    "
         ]
       },
-      "\n    ",
+      "\r\n    ",
       {
         "tag": "main",
         "props": {
@@ -8126,7 +8126,7 @@
           "tabindex": "-1"
         },
         "children": [
-          "\n        ",
+          "\r\n        ",
           {
             "tag": "nav",
             "props": {
@@ -8162,19 +8162,19 @@
               }
             ]
           },
-          "\n        ",
+          "\r\n        ",
           {
             "tag": "div",
             "props": {
               "class": "modalidade-layout"
             },
             "children": [
-              "\n            ",
+              "\r\n            ",
               {
                 "tag": "div",
                 "props": {},
                 "children": [
-                  "\n                ",
+                  "\r\n                ",
                   {
                     "tag": "section",
                     "props": {
@@ -8224,7 +8224,7 @@
                       }
                     ]
                   },
-                  "\n                ",
+                  "\r\n                ",
                   {
                     "tag": "section",
                     "props": {
@@ -8238,7 +8238,7 @@
                           "Galeria de fotos oficiais"
                         ]
                       },
-                      "\n                    ",
+                      "\r\n                    ",
                       {
                         "tag": "div",
                         "props": {
@@ -8255,10 +8255,10 @@
                           }
                         ]
                       },
-                      "\n                "
+                      "\r\n                "
                     ]
                   },
-                  "\n                ",
+                  "\r\n                ",
                   {
                     "tag": "section",
                     "props": {
@@ -8272,7 +8272,7 @@
                           "Fonte e informações atualizadas"
                         ]
                       },
-                      "\n                    ",
+                      "\r\n                    ",
                       {
                         "tag": "a",
                         "props": {
@@ -8282,7 +8282,7 @@
                           "Consultar a publicação oficial da Prefeitura de Betim"
                         ]
                       },
-                      "\n                    ",
+                      "\r\n                    ",
                       {
                         "tag": "p",
                         "props": {
@@ -8292,13 +8292,13 @@
                           "Fonte consultada em 11/11/2026. A oferta pode mudar."
                         ]
                       },
-                      "\n                "
+                      "\r\n                "
                     ]
                   },
-                  "\n            "
+                  "\r\n            "
                 ]
               },
-              "\n            ",
+              "\r\n            ",
               {
                 "tag": "aside",
                 "props": {
@@ -8306,7 +8306,7 @@
                   "aria-label": "Participação e agenda"
                 },
                 "children": [
-                  "\n                ",
+                  "\r\n                ",
                   {
                     "tag": "section",
                     "props": {
@@ -8320,7 +8320,7 @@
                           "Como participar"
                         ]
                       },
-                      "\n                    ",
+                      "\r\n                    ",
                       {
                         "tag": "p",
                         "props": {},
@@ -8328,7 +8328,7 @@
                           "Procure o núcleo de interesse para confirmar as condições de participação antes de realizar a inscrição."
                         ]
                       },
-                      "\n                    ",
+                      "\r\n                    ",
                       {
                         "tag": "h3",
                         "props": {},
@@ -8343,7 +8343,7 @@
                           "Confirme a faixa etária, os documentos exigidos, os horários e as vagas com o núcleo responsável."
                         ]
                       },
-                      "\n                    ",
+                      "\r\n                    ",
                       {
                         "tag": "a",
                         "props": {
@@ -8356,10 +8356,10 @@
                           "Consultar participação"
                         ]
                       },
-                      "\n                "
+                      "\r\n                "
                     ]
                   },
-                  "\n                ",
+                  "\r\n                ",
                   {
                     "tag": "section",
                     "props": {
@@ -8392,13 +8392,13 @@
                       }
                     ]
                   },
-                  "\n            "
+                  "\r\n            "
                 ]
               },
-              "\n        "
+              "\r\n        "
             ]
           },
-          "\n        ",
+          "\r\n        ",
           {
             "tag": "a",
             "props": {
@@ -8409,10 +8409,10 @@
               "← Voltar às modalidades"
             ]
           },
-          "\n    "
+          "\r\n    "
         ]
       },
-      "\n    ",
+      "\r\n    ",
       {
         "tag": "footer",
         "props": {
@@ -8437,14 +8437,14 @@
           }
         ]
       },
-      "\n"
+      "\r\n"
     ],
     "locations": []
   },
   "xadrez": {
     "title": "Xadrez — Portal do Esporte Betim",
     "nodes": [
-      "\n    ",
+      "\r\n    ",
       {
         "tag": "a",
         "props": {
@@ -8455,21 +8455,21 @@
           "Ir para o conteúdo"
         ]
       },
-      "\n    \n    ",
+      "\r\n    \r\n    ",
       {
         "tag": "header",
         "props": {
           "class": "modalidade-hero"
         },
         "children": [
-          "\n        ",
+          "\r\n        ",
           {
             "tag": "div",
             "props": {
               "class": "modalidade-hero-inner"
             },
             "children": [
-              "\n            ",
+              "\r\n            ",
               {
                 "tag": "span",
                 "props": {
@@ -8479,7 +8479,7 @@
                   "Escola de Esportes"
                 ]
               },
-              "\n            ",
+              "\r\n            ",
               {
                 "tag": "h1",
                 "props": {},
@@ -8487,7 +8487,7 @@
                   "Xadrez"
                 ]
               },
-              "\n            ",
+              "\r\n            ",
               {
                 "tag": "p",
                 "props": {},
@@ -8495,13 +8495,13 @@
                   "Conheça Xadrez no Programa Viva o Esporte de Betim."
                 ]
               },
-              "\n        "
+              "\r\n        "
             ]
           },
-          "\n    "
+          "\r\n    "
         ]
       },
-      "\n    ",
+      "\r\n    ",
       {
         "tag": "main",
         "props": {
@@ -8510,7 +8510,7 @@
           "tabindex": "-1"
         },
         "children": [
-          "\n        ",
+          "\r\n        ",
           {
             "tag": "nav",
             "props": {
@@ -8546,19 +8546,19 @@
               }
             ]
           },
-          "\n        ",
+          "\r\n        ",
           {
             "tag": "div",
             "props": {
               "class": "modalidade-layout"
             },
             "children": [
-              "\n            ",
+              "\r\n            ",
               {
                 "tag": "div",
                 "props": {},
                 "children": [
-                  "\n                ",
+                  "\r\n                ",
                   {
                     "tag": "section",
                     "props": {
@@ -8608,7 +8608,7 @@
                       }
                     ]
                   },
-                  "\n                ",
+                  "\r\n                ",
                   {
                     "tag": "section",
                     "props": {
@@ -8622,7 +8622,7 @@
                           "Galeria de fotos oficiais"
                         ]
                       },
-                      "\n                    ",
+                      "\r\n                    ",
                       {
                         "tag": "div",
                         "props": {
@@ -8639,10 +8639,10 @@
                           }
                         ]
                       },
-                      "\n                "
+                      "\r\n                "
                     ]
                   },
-                  "\n                ",
+                  "\r\n                ",
                   {
                     "tag": "section",
                     "props": {
@@ -8656,7 +8656,7 @@
                           "Fonte e informações atualizadas"
                         ]
                       },
-                      "\n                    ",
+                      "\r\n                    ",
                       {
                         "tag": "a",
                         "props": {
@@ -8666,7 +8666,7 @@
                           "Consultar a publicação oficial da Prefeitura de Betim"
                         ]
                       },
-                      "\n                    ",
+                      "\r\n                    ",
                       {
                         "tag": "p",
                         "props": {
@@ -8676,13 +8676,13 @@
                           "Fonte consultada em 11/11/2026. A oferta pode mudar."
                         ]
                       },
-                      "\n                "
+                      "\r\n                "
                     ]
                   },
-                  "\n            "
+                  "\r\n            "
                 ]
               },
-              "\n            ",
+              "\r\n            ",
               {
                 "tag": "aside",
                 "props": {
@@ -8690,7 +8690,7 @@
                   "aria-label": "Participação e agenda"
                 },
                 "children": [
-                  "\n                ",
+                  "\r\n                ",
                   {
                     "tag": "section",
                     "props": {
@@ -8704,7 +8704,7 @@
                           "Como participar"
                         ]
                       },
-                      "\n                    ",
+                      "\r\n                    ",
                       {
                         "tag": "p",
                         "props": {},
@@ -8712,7 +8712,7 @@
                           "Procure o núcleo de interesse para confirmar as condições de participação antes de realizar a inscrição."
                         ]
                       },
-                      "\n                    ",
+                      "\r\n                    ",
                       {
                         "tag": "h3",
                         "props": {},
@@ -8727,7 +8727,7 @@
                           "Confirme a faixa etária, os documentos exigidos, os horários e as vagas com o núcleo responsável."
                         ]
                       },
-                      "\n                    ",
+                      "\r\n                    ",
                       {
                         "tag": "a",
                         "props": {
@@ -8740,10 +8740,10 @@
                           "Consultar participação"
                         ]
                       },
-                      "\n                "
+                      "\r\n                "
                     ]
                   },
-                  "\n                ",
+                  "\r\n                ",
                   {
                     "tag": "section",
                     "props": {
@@ -8776,13 +8776,13 @@
                       }
                     ]
                   },
-                  "\n            "
+                  "\r\n            "
                 ]
               },
-              "\n        "
+              "\r\n        "
             ]
           },
-          "\n        ",
+          "\r\n        ",
           {
             "tag": "a",
             "props": {
@@ -8793,10 +8793,10 @@
               "← Voltar às modalidades"
             ]
           },
-          "\n    "
+          "\r\n    "
         ]
       },
-      "\n    ",
+      "\r\n    ",
       {
         "tag": "footer",
         "props": {
@@ -8821,14 +8821,14 @@
           }
         ]
       },
-      "\n"
+      "\r\n"
     ],
     "locations": []
   },
   "bicicross": {
     "title": "Bicicross — Portal do Esporte Betim",
     "nodes": [
-      "\n    ",
+      "\r\n    ",
       {
         "tag": "a",
         "props": {
@@ -8839,21 +8839,21 @@
           "Ir para o conteúdo"
         ]
       },
-      "\n    \n    ",
+      "\r\n    \r\n    ",
       {
         "tag": "header",
         "props": {
           "class": "modalidade-hero"
         },
         "children": [
-          "\n        ",
+          "\r\n        ",
           {
             "tag": "div",
             "props": {
               "class": "modalidade-hero-inner"
             },
             "children": [
-              "\n            ",
+              "\r\n            ",
               {
                 "tag": "span",
                 "props": {
@@ -8863,7 +8863,7 @@
                   "Escola de Esportes"
                 ]
               },
-              "\n            ",
+              "\r\n            ",
               {
                 "tag": "h1",
                 "props": {},
@@ -8871,7 +8871,7 @@
                   "Bicicross"
                 ]
               },
-              "\n            ",
+              "\r\n            ",
               {
                 "tag": "p",
                 "props": {},
@@ -8879,13 +8879,13 @@
                   "Conheça Bicicross no Programa Viva o Esporte de Betim."
                 ]
               },
-              "\n        "
+              "\r\n        "
             ]
           },
-          "\n    "
+          "\r\n    "
         ]
       },
-      "\n    ",
+      "\r\n    ",
       {
         "tag": "main",
         "props": {
@@ -8894,7 +8894,7 @@
           "tabindex": "-1"
         },
         "children": [
-          "\n        ",
+          "\r\n        ",
           {
             "tag": "nav",
             "props": {
@@ -8930,19 +8930,19 @@
               }
             ]
           },
-          "\n        ",
+          "\r\n        ",
           {
             "tag": "div",
             "props": {
               "class": "modalidade-layout"
             },
             "children": [
-              "\n            ",
+              "\r\n            ",
               {
                 "tag": "div",
                 "props": {},
                 "children": [
-                  "\n                ",
+                  "\r\n                ",
                   {
                     "tag": "section",
                     "props": {
@@ -8992,7 +8992,7 @@
                       }
                     ]
                   },
-                  "\n                ",
+                  "\r\n                ",
                   {
                     "tag": "section",
                     "props": {
@@ -9006,7 +9006,7 @@
                           "Galeria de fotos oficiais"
                         ]
                       },
-                      "\n                    ",
+                      "\r\n                    ",
                       {
                         "tag": "div",
                         "props": {
@@ -9023,10 +9023,10 @@
                           }
                         ]
                       },
-                      "\n                "
+                      "\r\n                "
                     ]
                   },
-                  "\n                ",
+                  "\r\n                ",
                   {
                     "tag": "section",
                     "props": {
@@ -9040,7 +9040,7 @@
                           "Fonte e informações atualizadas"
                         ]
                       },
-                      "\n                    ",
+                      "\r\n                    ",
                       {
                         "tag": "a",
                         "props": {
@@ -9050,7 +9050,7 @@
                           "Consultar a publicação oficial da Prefeitura de Betim"
                         ]
                       },
-                      "\n                    ",
+                      "\r\n                    ",
                       {
                         "tag": "p",
                         "props": {
@@ -9060,13 +9060,13 @@
                           "Fonte consultada em 11/11/2026. A oferta pode mudar."
                         ]
                       },
-                      "\n                "
+                      "\r\n                "
                     ]
                   },
-                  "\n            "
+                  "\r\n            "
                 ]
               },
-              "\n            ",
+              "\r\n            ",
               {
                 "tag": "aside",
                 "props": {
@@ -9074,7 +9074,7 @@
                   "aria-label": "Participação e agenda"
                 },
                 "children": [
-                  "\n                ",
+                  "\r\n                ",
                   {
                     "tag": "section",
                     "props": {
@@ -9088,7 +9088,7 @@
                           "Como participar"
                         ]
                       },
-                      "\n                    ",
+                      "\r\n                    ",
                       {
                         "tag": "p",
                         "props": {},
@@ -9096,7 +9096,7 @@
                           "Procure o núcleo de interesse para confirmar as condições de participação antes de realizar a inscrição."
                         ]
                       },
-                      "\n                    ",
+                      "\r\n                    ",
                       {
                         "tag": "h3",
                         "props": {},
@@ -9111,7 +9111,7 @@
                           "Confirme a faixa etária, os documentos exigidos, os horários e as vagas com o núcleo responsável."
                         ]
                       },
-                      "\n                    ",
+                      "\r\n                    ",
                       {
                         "tag": "a",
                         "props": {
@@ -9124,10 +9124,10 @@
                           "Consultar participação"
                         ]
                       },
-                      "\n                "
+                      "\r\n                "
                     ]
                   },
-                  "\n                ",
+                  "\r\n                ",
                   {
                     "tag": "section",
                     "props": {
@@ -9160,13 +9160,13 @@
                       }
                     ]
                   },
-                  "\n            "
+                  "\r\n            "
                 ]
               },
-              "\n        "
+              "\r\n        "
             ]
           },
-          "\n        ",
+          "\r\n        ",
           {
             "tag": "a",
             "props": {
@@ -9177,10 +9177,10 @@
               "← Voltar às modalidades"
             ]
           },
-          "\n    "
+          "\r\n    "
         ]
       },
-      "\n    ",
+      "\r\n    ",
       {
         "tag": "footer",
         "props": {
@@ -9205,14 +9205,14 @@
           }
         ]
       },
-      "\n"
+      "\r\n"
     ],
     "locations": []
   },
   "natacao": {
     "title": "Natação — Portal do Esporte Betim",
     "nodes": [
-      "\n    ",
+      "\r\n    ",
       {
         "tag": "a",
         "props": {
@@ -9223,21 +9223,21 @@
           "Ir para o conteúdo"
         ]
       },
-      "\n    \n    ",
+      "\r\n    \r\n    ",
       {
         "tag": "header",
         "props": {
           "class": "modalidade-hero"
         },
         "children": [
-          "\n        ",
+          "\r\n        ",
           {
             "tag": "div",
             "props": {
               "class": "modalidade-hero-inner"
             },
             "children": [
-              "\n            ",
+              "\r\n            ",
               {
                 "tag": "span",
                 "props": {
@@ -9247,7 +9247,7 @@
                   "Equipe competitiva"
                 ]
               },
-              "\n            ",
+              "\r\n            ",
               {
                 "tag": "h1",
                 "props": {},
@@ -9255,7 +9255,7 @@
                   "Natação"
                 ]
               },
-              "\n            ",
+              "\r\n            ",
               {
                 "tag": "p",
                 "props": {},
@@ -9263,13 +9263,13 @@
                   "Conheça Natação no Programa Viva o Esporte de Betim."
                 ]
               },
-              "\n        "
+              "\r\n        "
             ]
           },
-          "\n    "
+          "\r\n    "
         ]
       },
-      "\n    ",
+      "\r\n    ",
       {
         "tag": "main",
         "props": {
@@ -9278,7 +9278,7 @@
           "tabindex": "-1"
         },
         "children": [
-          "\n        ",
+          "\r\n        ",
           {
             "tag": "nav",
             "props": {
@@ -9314,19 +9314,19 @@
               }
             ]
           },
-          "\n        ",
+          "\r\n        ",
           {
             "tag": "div",
             "props": {
               "class": "modalidade-layout"
             },
             "children": [
-              "\n            ",
+              "\r\n            ",
               {
                 "tag": "div",
                 "props": {},
                 "children": [
-                  "\n                ",
+                  "\r\n                ",
                   {
                     "tag": "section",
                     "props": {
@@ -9356,7 +9356,7 @@
                       }
                     ]
                   },
-                  "\n                ",
+                  "\r\n                ",
                   {
                     "tag": "section",
                     "props": {
@@ -9370,7 +9370,7 @@
                           "Galeria de fotos oficiais"
                         ]
                       },
-                      "\n                    ",
+                      "\r\n                    ",
                       {
                         "tag": "div",
                         "props": {
@@ -9387,10 +9387,10 @@
                           }
                         ]
                       },
-                      "\n                "
+                      "\r\n                "
                     ]
                   },
-                  "\n                ",
+                  "\r\n                ",
                   {
                     "tag": "section",
                     "props": {
@@ -9404,7 +9404,7 @@
                           "Fonte e informações atualizadas"
                         ]
                       },
-                      "\n                    ",
+                      "\r\n                    ",
                       {
                         "tag": "a",
                         "props": {
@@ -9414,7 +9414,7 @@
                           "Consultar a publicação oficial da Prefeitura de Betim"
                         ]
                       },
-                      "\n                    ",
+                      "\r\n                    ",
                       {
                         "tag": "p",
                         "props": {
@@ -9424,13 +9424,13 @@
                           "Fonte consultada em 11/11/2026. A oferta pode mudar."
                         ]
                       },
-                      "\n                "
+                      "\r\n                "
                     ]
                   },
-                  "\n            "
+                  "\r\n            "
                 ]
               },
-              "\n            ",
+              "\r\n            ",
               {
                 "tag": "aside",
                 "props": {
@@ -9438,7 +9438,7 @@
                   "aria-label": "Participação e agenda"
                 },
                 "children": [
-                  "\n                ",
+                  "\r\n                ",
                   {
                     "tag": "section",
                     "props": {
@@ -9452,7 +9452,7 @@
                           "Como acompanhar"
                         ]
                       },
-                      "\n                    ",
+                      "\r\n                    ",
                       {
                         "tag": "p",
                         "props": {},
@@ -9460,7 +9460,7 @@
                           "Consulte as publicações e orientações da Secretaria de Esportes para acompanhar as equipes e os processos de seleção."
                         ]
                       },
-                      "\n\n                    ",
+                      "\r\n\r\n                    ",
                       {
                         "tag": "a",
                         "props": {
@@ -9471,10 +9471,10 @@
                           "Consultar a equipe"
                         ]
                       },
-                      "\n                "
+                      "\r\n                "
                     ]
                   },
-                  "\n                ",
+                  "\r\n                ",
                   {
                     "tag": "section",
                     "props": {
@@ -9507,13 +9507,13 @@
                       }
                     ]
                   },
-                  "\n            "
+                  "\r\n            "
                 ]
               },
-              "\n        "
+              "\r\n        "
             ]
           },
-          "\n        ",
+          "\r\n        ",
           {
             "tag": "a",
             "props": {
@@ -9524,10 +9524,10 @@
               "← Voltar às modalidades"
             ]
           },
-          "\n    "
+          "\r\n    "
         ]
       },
-      "\n    ",
+      "\r\n    ",
       {
         "tag": "footer",
         "props": {
@@ -9552,14 +9552,14 @@
           }
         ]
       },
-      "\n"
+      "\r\n"
     ],
     "locations": []
   },
   "ginastica-ritmica": {
     "title": "Ginástica Rítmica — Portal do Esporte Betim",
     "nodes": [
-      "\n    ",
+      "\r\n    ",
       {
         "tag": "a",
         "props": {
@@ -9570,21 +9570,21 @@
           "Ir para o conteúdo"
         ]
       },
-      "\n    \n    ",
+      "\r\n    \r\n    ",
       {
         "tag": "header",
         "props": {
           "class": "modalidade-hero"
         },
         "children": [
-          "\n        ",
+          "\r\n        ",
           {
             "tag": "div",
             "props": {
               "class": "modalidade-hero-inner"
             },
             "children": [
-              "\n            ",
+              "\r\n            ",
               {
                 "tag": "span",
                 "props": {
@@ -9594,7 +9594,7 @@
                   "Equipe competitiva"
                 ]
               },
-              "\n            ",
+              "\r\n            ",
               {
                 "tag": "h1",
                 "props": {},
@@ -9602,7 +9602,7 @@
                   "Ginástica Rítmica"
                 ]
               },
-              "\n            ",
+              "\r\n            ",
               {
                 "tag": "p",
                 "props": {},
@@ -9610,13 +9610,13 @@
                   "Conheça Ginástica Rítmica no Programa Viva o Esporte de Betim."
                 ]
               },
-              "\n        "
+              "\r\n        "
             ]
           },
-          "\n    "
+          "\r\n    "
         ]
       },
-      "\n    ",
+      "\r\n    ",
       {
         "tag": "main",
         "props": {
@@ -9625,7 +9625,7 @@
           "tabindex": "-1"
         },
         "children": [
-          "\n        ",
+          "\r\n        ",
           {
             "tag": "nav",
             "props": {
@@ -9661,19 +9661,19 @@
               }
             ]
           },
-          "\n        ",
+          "\r\n        ",
           {
             "tag": "div",
             "props": {
               "class": "modalidade-layout"
             },
             "children": [
-              "\n            ",
+              "\r\n            ",
               {
                 "tag": "div",
                 "props": {},
                 "children": [
-                  "\n                ",
+                  "\r\n                ",
                   {
                     "tag": "section",
                     "props": {
@@ -9703,7 +9703,7 @@
                       }
                     ]
                   },
-                  "\n                ",
+                  "\r\n                ",
                   {
                     "tag": "section",
                     "props": {
@@ -9717,7 +9717,7 @@
                           "Galeria de fotos oficiais"
                         ]
                       },
-                      "\n                    ",
+                      "\r\n                    ",
                       {
                         "tag": "div",
                         "props": {
@@ -9734,10 +9734,10 @@
                           }
                         ]
                       },
-                      "\n                "
+                      "\r\n                "
                     ]
                   },
-                  "\n                ",
+                  "\r\n                ",
                   {
                     "tag": "section",
                     "props": {
@@ -9751,7 +9751,7 @@
                           "Fonte e informações atualizadas"
                         ]
                       },
-                      "\n                    ",
+                      "\r\n                    ",
                       {
                         "tag": "a",
                         "props": {
@@ -9761,7 +9761,7 @@
                           "Consultar a publicação oficial da Prefeitura de Betim"
                         ]
                       },
-                      "\n                    ",
+                      "\r\n                    ",
                       {
                         "tag": "p",
                         "props": {
@@ -9771,13 +9771,13 @@
                           "Fonte consultada em 11/11/2026. A oferta pode mudar."
                         ]
                       },
-                      "\n                "
+                      "\r\n                "
                     ]
                   },
-                  "\n            "
+                  "\r\n            "
                 ]
               },
-              "\n            ",
+              "\r\n            ",
               {
                 "tag": "aside",
                 "props": {
@@ -9785,7 +9785,7 @@
                   "aria-label": "Participação e agenda"
                 },
                 "children": [
-                  "\n                ",
+                  "\r\n                ",
                   {
                     "tag": "section",
                     "props": {
@@ -9799,7 +9799,7 @@
                           "Como acompanhar"
                         ]
                       },
-                      "\n                    ",
+                      "\r\n                    ",
                       {
                         "tag": "p",
                         "props": {},
@@ -9807,7 +9807,7 @@
                           "Consulte as publicações e orientações da Secretaria de Esportes para acompanhar as equipes e os processos de seleção."
                         ]
                       },
-                      "\n\n                    ",
+                      "\r\n\r\n                    ",
                       {
                         "tag": "a",
                         "props": {
@@ -9818,10 +9818,10 @@
                           "Consultar a equipe"
                         ]
                       },
-                      "\n                "
+                      "\r\n                "
                     ]
                   },
-                  "\n                ",
+                  "\r\n                ",
                   {
                     "tag": "section",
                     "props": {
@@ -9854,13 +9854,13 @@
                       }
                     ]
                   },
-                  "\n            "
+                  "\r\n            "
                 ]
               },
-              "\n        "
+              "\r\n        "
             ]
           },
-          "\n        ",
+          "\r\n        ",
           {
             "tag": "a",
             "props": {
@@ -9871,10 +9871,10 @@
               "← Voltar às modalidades"
             ]
           },
-          "\n    "
+          "\r\n    "
         ]
       },
-      "\n    ",
+      "\r\n    ",
       {
         "tag": "footer",
         "props": {
@@ -9899,7 +9899,7 @@
           }
         ]
       },
-      "\n"
+      "\r\n"
     ],
     "locations": []
   }

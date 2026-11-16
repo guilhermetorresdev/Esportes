@@ -8,6 +8,8 @@ import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.security.web.SecurityFilterChain;
 import org.springframework.security.web.authentication.HttpStatusEntryPoint;
+import org.springframework.security.web.csrf.CookieCsrfTokenRepository;
+import org.springframework.security.web.csrf.CsrfTokenRequestAttributeHandler;
 import org.springframework.http.HttpStatus;
 
 @Configuration
@@ -21,10 +23,13 @@ public class SecurityConfig {
     @Bean
     public SecurityFilterChain securityFilterChain(HttpSecurity http) throws Exception {
         http
-                // CSRF desabilitado: API é consumida via fetch/JS por páginas estáticas,
-                // sem suporte a token CSRF nelas ainda. Mitigado por CORS restrito a
-                // origens conhecidas + cookie de sessão SameSite=Lax (padrão do Spring).
-                .csrf(csrf -> csrf.disable())
+                .csrf(csrf -> {
+                    var repository = CookieCsrfTokenRepository.withHttpOnlyFalse();
+                    repository.setCookiePath("/");
+                    csrf.csrfTokenRepository(repository)
+                            .csrfTokenRequestHandler(new CsrfTokenRequestAttributeHandler())
+                            .ignoringRequestMatchers("/login", "/api/inscricoes", "/api/suporte/mensagens");
+                })
                 .authorizeHttpRequests(auth -> auth
                         .requestMatchers(HttpMethod.GET,
                                 "/api/eventos/**",
@@ -38,7 +43,8 @@ public class SecurityConfig {
                         .requestMatchers(HttpMethod.POST, "/api/inscricoes", "/api/suporte/mensagens").permitAll()
                         .requestMatchers(HttpMethod.GET, "/api/suporte/status").permitAll()
                         .requestMatchers("/api/auth/me").permitAll()
-                        .requestMatchers("/api/horto/**").hasRole("ADMIN")
+                        .requestMatchers(HttpMethod.GET, "/api/auth/csrf").permitAll()
+                        .requestMatchers("/api/horto/**", "/api/eventos/**", "/api/almoxarifado/**").hasRole("ADMIN")
                         .requestMatchers(HttpMethod.POST, "/api/fotos/atualizar").hasRole("ADMIN")
                         .requestMatchers(HttpMethod.POST, "/api/regionais/catalogo").hasRole("ADMIN")
                         .requestMatchers(HttpMethod.POST, "/api/conquistas/atualizar").hasRole("ADMIN")

@@ -1,0 +1,24 @@
+name: Production smoke test
+
+on:
+  workflow_dispatch:
+    inputs:
+      base_url:
+        description: URL do portal implantado
+        required: true
+        type: string
+
+jobs:
+  smoke:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Validar configuração do Compose
+        run: docker compose -f docker-compose.prod.yml config
+      - name: Executar smoke test
+        shell: pwsh
+        env:
+          PORTAL_BASE_URL: ${{ inputs.base_url }}
+          PORTAL_SMOKE_USERNAME: ${{ secrets.PORTAL_SMOKE_USERNAME }}
+          PORTAL_SMOKE_PASSWORD: ${{ secrets.PORTAL_SMOKE_PASSWORD }}
+        run: ./ops/smoke-prod.ps1

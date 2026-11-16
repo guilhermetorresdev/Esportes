@@ -1,18 +1,51 @@
 (() => {
+    const metodosSeguros = new Set(['GET', 'HEAD', 'OPTIONS', 'TRACE']);
+    const rotasSemCsrf = new Set(['/login']);
+    const fetchOriginal = typeof window.fetch === 'function' ? window.fetch.bind(window) : null;
+    let tokenPendente;
+
+    function tokenDoCookie() {
+        return document.cookie.split('; ').find(item => item.startsWith('XSRF-TOKEN='))?.split('=').slice(1).join('=');
+    }
+
+    async function obterToken() {
+        const existente = tokenDoCookie();
+        if (existente) return decodeURIComponent(existente);
+        tokenPendente ||= fetchOriginal('/api/auth/csrf', { credentials: 'include', cache: 'no-store' })
+            .then(resposta => { if (!resposta.ok) throw new Error('Token CSRF indisponível'); return resposta.json(); })
+            .then(dados => dados.token);
+        try { return await tokenPendente; } finally { tokenPendente = null; }
+    }
+
+    if (fetchOriginal) window.fetch = async (input, init = {}) => {
+        const metodo = (init.method || (input instanceof Request ? input.method : 'GET')).toUpperCase();
+        const caminho = new URL(input instanceof Request ? input.url : input, location.href).pathname;
+        if (metodosSeguros.has(metodo) || rotasSemCsrf.has(caminho) || caminho === '/api/auth/csrf') {
+            return fetchOriginal(input, init);
+        }
+        const headers = new Headers(init.headers || (input instanceof Request ? input.headers : undefined));
+        headers.set('X-XSRF-TOKEN', await obterToken());
+        return fetchOriginal(input, { ...init, headers, credentials: init.credentials || 'include' });
+    };
+
+    const xhrOriginal = typeof XMLHttpRequest === 'function' && XMLHttpRequest.prototype.open;
+    const enviarOriginal = typeof XMLHttpRequest === 'function' && XMLHttpRequest.prototype.send;
+    if (xhrOriginal && enviarOriginal) XMLHttpRequest.prototype.open = function (metodo, url, ...resto) {
+        this.__portalCsrfMetodo = String(metodo).toUpperCase(); this.__portalCsrfCaminho = new URL(url, location.href).pathname;
+        return xhrOriginal.call(this, metodo, url, ...resto);
+    };
+    if (xhrOriginal && enviarOriginal) XMLHttpRequest.prototype.send = function (corpo) {
+        if (metodosSeguros.has(this.__portalCsrfMetodo || 'GET') || rotasSemCsrf.has(this.__portalCsrfCaminho)) return enviarOriginal.call(this, corpo);
+        obterToken().then(token => { this.setRequestHeader('X-XSRF-TOKEN', token); enviarOriginal.call(this, corpo); })
+            .catch(() => this.dispatchEvent(new Event('error')));
+    };
+
     if (document.getElementById('portal-site-header')) return;
 
     const librasScript = document.createElement('script');
     librasScript.src = '/js/portal-libras.js';
     document.head.append(librasScript);
 
-    const suporteCss = document.createElement('link');
-    suporteCss.rel = 'stylesheet';
-    suporteCss.href = '/css/portal-suporte.css';
-    document.head.append(suporteCss);
-    const suporteScript = document.createElement('script');
-    suporteScript.type = 'module';
-    suporteScript.src = '/js/portal-suporte.js';
-    document.head.append(suporteScript);
     const fotosScript = document.createElement('script');
     fotosScript.type = 'module';
     fotosScript.src = '/js/portal-fotos.js';

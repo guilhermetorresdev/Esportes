@@ -41,23 +41,35 @@ O assistente deve concluir um lote pequeno, verificar, atualizar o registro e pe
 O comando funciona como convenção de conversa nas ferramentas que leem essas instruções;
 não configura automaticamente outros aplicativos ou contas de IA.
 
+## Estado atual das rotas e migrações
+
+O portal web ativo fica diretamente em `frontend/` e usa Vite, React e os arquivos
+HTML legados mantidos para compatibilidade. As rotas canônicas montadas por React
+estão documentadas em `docs/rotas-portal.md`; uma rota não listada como React
+continua sendo servida pelo HTML legado.
+
+O quadro de issues exibido no início deste documento é histórico das issues #2–#7.
+O estado atual das issues e das validações recentes está em `docs/progresso-issues.md`
+e `docs/retomada.md`; conclusão local não significa fechamento ou publicação remota.
+
 Estrutura inicial do projeto:
 
 ```text
 portal-esporte-betim/
 ├── backend/
 ├── frontend/
-│   └── portal-esporte-web/
+│   ├── src/
+│   ├── public/
+│   └── package.json
 ├── database/
-│   └── schema.sql
 └── README.md
 ```
 
 ## Pastas
 
 - `backend`: API do portal.
-- `frontend/portal-esporte-web`: aplicacao web do portal.
-- `database/schema.sql`: script de criacao do banco de dados.
+- `frontend`: aplicação web Vite/React e páginas legadas compatíveis.
+- `database`: scripts e documentação do cadastro auxiliar de núcleos.
 
 ## Execucao local
 

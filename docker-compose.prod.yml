@@ -1,0 +1,35 @@
+services:
+  backend:
+    build: ./backend
+    environment:
+      SPRING_PROFILES_ACTIVE: prod
+      SPRING_DATASOURCE_USERNAME: ${SPRING_DATASOURCE_USERNAME:?defina SPRING_DATASOURCE_USERNAME}
+      SPRING_DATASOURCE_PASSWORD: ${SPRING_DATASOURCE_PASSWORD:?defina SPRING_DATASOURCE_PASSWORD}
+      SPRING_DATASOURCE_URL: ${SPRING_DATASOURCE_URL:-jdbc:h2:file:/app/data/portal_esporte}
+      SESSION_COOKIE_SECURE: ${SESSION_COOKIE_SECURE:-true}
+      SESSION_COOKIE_SAME_SITE: ${SESSION_COOKIE_SAME_SITE:-lax}
+      APP_UPLOAD_DIR: /app/videos
+      APP_UPLOAD_IMAGENS_DIR: /app/imagens
+      FOTOS_SYNC_ENABLED: ${FOTOS_SYNC_ENABLED:-false}
+      CONQUISTAS_SYNC_ENABLED: ${CONQUISTAS_SYNC_ENABLED:-false}
+    volumes:
+      - esporte-dados-prod:/app/data
+      - esporte-videos-prod:/app/videos
+      - esporte-imagens-prod:/app/imagens
+    restart: unless-stopped
+
+  frontend:
+    build: ./frontend
+    ports:
+      - "${PORTAL_HTTP_PORT:-8081}:80"
+    depends_on:
+      - backend
+    volumes:
+      - esporte-videos-prod:/usr/share/nginx/html/Videos:ro
+      - esporte-imagens-prod:/usr/share/nginx/html/Imagens:ro
+    restart: unless-stopped
+
+volumes:
+  esporte-dados-prod:
+  esporte-videos-prod:
+  esporte-imagens-prod:

@@ -9,10 +9,6 @@ export default function AdminContent({ onDocument }) {
         </div>
 
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-12">
-            <a href="/agendamento-quadras.html" className="admin-card border-blue-900 shadow-md block">
-                <h3 className="text-lg font-black text-blue-900 uppercase italic mb-4">Quadras do Horto</h3>
-                <div className="doc-item"><span>Agendamento e disponibilidade</span><i className="fas fa-calendar-check text-blue-900"></i></div>
-            </a>
             <div className="admin-card border-blue-900 shadow-md">
                 <h3 className="text-lg font-black text-blue-900 uppercase italic mb-4">Legislação</h3>
                 <button type="button" className="doc-item" data-documento="lei-incentivo" onClick={() => onDocument('lei-incentivo')} aria-haspopup="dialog" aria-controls="adminDocumento"><span>Lei de Incentivo ao Esporte</span><i className="fas fa-file-pdf text-red-500"></i></button>

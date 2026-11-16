@@ -24,8 +24,9 @@ export function EquipmentDetails({ item, onClose }) {
     const dialog = useRef(null);
     useEffect(() => {
         if (!item) return;
-        const node = dialog.current; node.showModal();
-        return () => { if (node.open) node.close(); };
+        const origem = document.activeElement;
+        const node = dialog.current; node.showModal(); node.querySelector('button, a')?.focus();
+        return () => { if (node.open) node.close(); origem?.focus({ preventScroll: true }); };
     }, [item]);
     return <dialog ref={dialog} className="regional-dialog" aria-labelledby="regional-detail-title" onCancel={onClose}
         onClick={event => { if (event.target === event.currentTarget) onClose(); }}>

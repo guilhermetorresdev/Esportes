@@ -13,9 +13,13 @@ public class Evento {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
     private String nome;
+    private String categoria;
     private String descricao;
     private LocalDate dataEvento;
+    private String hora;
     private String local;
+    private String responsavel;
+    private String materiais;
 
     public Long getId() {
         return id;
@@ -37,6 +41,9 @@ public class Evento {
         return descricao;
     }
 
+    public String getCategoria() { return categoria; }
+    public void setCategoria(String categoria) { this.categoria = categoria; }
+
     public void setDescricao(String descricao) {
         this.descricao = descricao;
     }
@@ -49,6 +56,9 @@ public class Evento {
         this.dataEvento = dataEvento;
     }
 
+    public String getHora() { return hora; }
+    public void setHora(String hora) { this.hora = hora; }
+
     public String getLocal() {
         return local;
     }
@@ -56,4 +66,9 @@ public class Evento {
     public void setLocal(String local) {
         this.local = local;
     }
+
+    public String getResponsavel() { return responsavel; }
+    public void setResponsavel(String responsavel) { this.responsavel = responsavel; }
+    public String getMateriais() { return materiais; }
+    public void setMateriais(String materiais) { this.materiais = materiais; }
 }

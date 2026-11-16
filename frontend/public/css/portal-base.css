@@ -182,6 +182,9 @@ body.portal-standard { margin: 0; font-family: var(--font-body); font-size: 1rem
 .portal-standard .portal-header-nav :where(a,summary,button):focus-visible,.portal-header-topbar :where(a):focus-visible { outline: 2px solid white; outline-offset: -3px; }
 .portal-standard .portal-header-topbar .portal-header-login:focus-visible { outline: 3px solid #facc15; outline-offset: 3px; }
 .portal-standard .portal-header-nav .portal-header-dropdown a:focus-visible { outline-color: var(--betim-blue-dark, #023568); }
+.agenda-modal, .almox-modal, .inscricao-modal { max-width: calc(100vw - 2rem); box-sizing: border-box; }
+.arquivos-card:focus-visible, .agenda-event:focus-visible { outline: 3px solid #facc15; outline-offset: 3px; }
+@media (max-width: 600px) { .agenda-modal, .almox-modal, .inscricao-modal { max-height: calc(100vh - 2rem); } }
 @media (max-width: 1023px) {
   .portal-standard .portal-header-topbar-inner { grid-template-columns: 1fr auto; gap: .75rem; padding: 1rem 0; }
   .portal-standard .portal-header-topbar .portal-header-title { grid-row: 2; grid-column: 1 / -1; font-size: 1.375rem; }
@@ -220,7 +223,7 @@ body.portal-standard { margin: 0; font-family: var(--font-body); font-size: 1rem
   .portal-header-compact .portal-header-utilities { width: auto; margin-left: auto; justify-content: flex-end; }
   .portal-header-compact .portal-scroll-beta { margin-left: 0; }
 }
-@media (prefers-reduced-motion: reduce) { .portal-scroll-city, .portal-scroll-beta { animation: none; } }
+@media (prefers-reduced-motion: reduce) { *, *::before, *::after { animation-duration: .01ms !important; animation-iteration-count: 1 !important; scroll-behavior: auto !important; transition-duration: .01ms !important; } .portal-scroll-city, .portal-scroll-beta { animation: none; } }
 @media (min-width: 1024px) and (max-width: 1279px) {
   .portal-standard .portal-header-inner:has(#portal-menu-gestao:not([hidden])) { flex-wrap: wrap; }
   .portal-standard .portal-header-inner:has(#portal-menu-gestao:not([hidden])) .portal-header-menus { flex-wrap: wrap; }

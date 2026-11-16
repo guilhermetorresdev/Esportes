@@ -2,6 +2,23 @@
 
 Acompanhamento visual da resolução das issues do Portal do Esporte de Betim.
 
+## Estado atual das issues de manutencao
+
+O painel abaixo e a referencia atual; o grafico e a tabela de #2-#7 abaixo foram
+preservados como historico do ciclo inicial e nao representam o backlog atual.
+
+| Issue | Estado local | Estado remoto | Evidencia atual |
+|---|---|---|---|
+| #16 | Resolvida | Fechada | Devolucoes parciais e saldo; `AlmoxarifadoApiTest` 2/2 |
+| #17 | Parcial | Aberta | Contrato e smoke automatizados; Docker/Nginx real pendente |
+| #18 | Parcial | Aberta | Acessibilidade automatizada 11/11; navegador real pendente |
+| #19 | Pendente | Aberta | 9 coordenadas verificadas; 21 sem fonte confirmada |
+| #20 | Em revisao | Aberta | README e `docs/rotas-portal.md` atualizados; validacao final em andamento |
+
+O estado remoto foi conferido no GitHub em 16/11/2026. Consulte `docs/retomada.md`
+para o historico de lotes, limitacoes e proximos passos. A documentacao nao fecha
+issues automaticamente.
+
 ### Progresso Geral
 
 **4 de 6 issues finalizadas (66.7%)**

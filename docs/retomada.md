@@ -1,6 +1,364 @@
 # Registro de retomada — comando :return
 
+## Release v1.8 — preparação — 16/11/2026
+
+- A versão acumulada do portal foi validada antes do versionamento.
+- Frontend: `npm run test:accessibility` aprovado em 12/12 e `npm run build` aprovado.
+- Backend: `backend/mvnw.cmd test` aprovado em 87/87.
+- A consulta de tags remotas falhou por indisponibilidade de conexão com o GitHub; a escolha de `v1.8` foi conferida contra as tags locais, que chegam até `v1.5`.
+- Próximo passo: criar o commit local `release: v1.8 — portal adaptado e fluxos administrativos`, tag anotada `v1.8` e enviar ambos ao `origin`, se a rede estiver disponível.
+
+## Adaptação Cloudflare — lote 1 — 16/11/2026
+
+- Reconhecimento do frontend concluído para preparação de Workers Static Assets.
+- O build atual continua produzindo `frontend/dist` com `index.html`, ativos Vite e diretórios de rotas como `inscricao`, `inscricaoAluno`, `administrativo`, `almoxarifado`, `agenda`, `comunicacao`, `conquistas` e `esporte-nas-regionais`.
+- `npm run build` passou com Vite 7.3.3; houve apenas o aviso de base Browserslist desatualizada.
+- A CLI oficial `cf` não está instalada nesta máquina. Nenhuma dependência foi instalada e nenhum deploy foi executado.
+- Limitação atual: ainda não existe configuração Cloudflare no repositório; a escolha do fluxo de configuração/publicação fica para o próximo lote, mantendo o backend Spring separado.
+- Próximo passo: verificar a configuração suportada pela CLI `cf` neste ambiente e preparar a publicação do frontend somente após confirmar o destino e a origem da API.
+
+## Adaptação Cloudflare — lote 2 — 16/11/2026
+
+- Consultada a documentação atual da CLI Cloudflare: projetos Vite novos usam `cloudflare.config.ts`; o fluxo não deve criar Wrangler neste repositório.
+- Node `v24.22.0` foi confirmado, acima do mínimo documentado para carregar a configuração tipada.
+- A CLI global `cf` foi instalada e responde em `1.0.0-rc.0`; login e deploy não foram executados.
+- `cf init frontend --no-install` detectou Vite, saída `dist` e nome proposto `portal-esporte-web`, mas não concluiu porque tentou adicionar `cf` como dependência local e o npm retornou `EACCES` ao acessar o registry/cache.
+- Nenhum `cloudflare.config.ts` ou configuração Wrangler foi criado. O `package.json` não recebeu alteração deste lote; as diferenças existentes são anteriores e foram preservadas.
+- Próximo passo: decidir se a instalação local da dependência Cloudflare será repetida com permissões de npm corrigidas; só então gerar/revisar a configuração antes de `cf build --dry-run`.
+
 ## Objetivo ativo
+- Issue #20 pronta para fechamento remoto: documentação de estrutura, rotas React/legadas e progresso atual validada contra `frontend/src/main.jsx`; `git diff --check` aprovado. O fechamento remoto será registrado separadamente no GitHub.
+- Issue #18: os testes da inscrição foram alinhados ao fluxo atual. `inscricao-cards.test.mjs` cobre cards e diálogo; `inscricao-react.test.mjs` passou em 8/8, com o cenário antigo de ficha direta separado como legado. `npm run test:accessibility` passou em 12/12. A validação visual em navegador real permanece pendente por indisponibilidade do host.
+- Issue #18: adicionada a cobertura `frontend/tests/inscricao-cards.test.mjs` para o fluxo atual da inscrição (cards Aluno, Instrutor e Núcleos, abertura da ficha do Aluno em diálogo e fechamento acessível). `npm run test:accessibility` passou em 12/12. Os 2 testes antigos de `inscricao-react.test.mjs` continuam fora da suíte consolidada porque ainda assumem a ficha aberta diretamente; a atualização deles fica separada da validação de acessibilidade.
+- Issue #18: a suíte consolidada de acessibilidade permanece aprovada em 11/11 e o smoke de rotas React já passou. A regressão completa executada fora do sandbox passou em 142/144; os 2 testes restantes de `inscricao-react.test.mjs` refletem o contrato antigo de ficha aberta diretamente, enquanto a implementação atual abre a ficha pelo card Aluno em modal. Nenhum fluxo visual foi alterado neste lote. Próximo: atualizar esses testes para o fluxo atual ou validar manualmente no navegador quando o host estiver disponível.
+- Issue #19: segunda rodada de pesquisa concluida sem novas coordenadas cadastraveis. A pagina oficial de Regionais fornece nomes e enderecos, e fontes municipais complementares confirmam alguns enderecos, mas os geocodificadores retornaram ruas, bairros ou locais diferentes sem correspondencia inequivoca com o equipamento. Nenhum centroide de rua foi convertido em pin. Os 21 locais seguem explicitamente pendentes; proximo passo depende de confirmacao municipal, levantamento cartografico oficial ou identificacao OSM do equipamento.
+- Issue #19 em investigacao: a lista foi conferida contra `frontend/public/data/regionais.json`; os 9 pins verificados permanecem em `frontend/src/regionais/equipamentos-pins.json` e 21 equipamentos continuam sem posicao confirmada. Criado `frontend/tests/regionais-coordinates.test.mjs`, com `npm run test:regionais-coordinates` aprovado em 1/1, validando fontes OSM, IDs/coordenadas unicos e ausencia de pontos ficticios. Buscas em fontes oficiais confirmaram enderecos, mas nao forneceram coordenadas; o Nominatim recusou consultas automatizadas. Proximo: obter confirmacao de coordenadas por fonte municipal ou mapa verificavel antes de cadastrar novos pontos.
+- Issue #20 alinhada localmente: `README.md`, `docs/progresso-issues.md` e `docs/rotas-portal.md` agora distinguem rotas React, compatibilidade legada, histórico de issues e estado remoto. Validação contra `frontend/src/main.jsx` passou e `git diff --check` não encontrou erros. A issue segue aberta até revisão final e fechamento remoto explícito.
+- Issue #20 em resolucao: README atualizado para a estrutura real em `frontend/`, criada a tabela `docs/rotas-portal.md` com as rotas React montadas por `frontend/src/main.jsx`, e registrada a distinção entre migração concluída, compatibilidade legada e trabalho futuro. Ainda falta revisar o quadro histórico de progresso e conferir a consistência final dos documentos.
+- Issue #18 em resolucao: criada a suite consolidada `npm run test:accessibility`, com 11/11 verificacoes aprovadas para modais, foco por teclado, anuncios de estado, movimento reduzido, responsividade, rotas e indicadores de foco. O smoke local de rotas React tambem passou e o build foi aprovado. A validacao visual/E2E em navegador real continua pendente porque o host do navegador esta indisponivel nesta sessao.
+- Revisão das issues abertas: #16 foi corrigida localmente com histórico separado de devoluções, saldo acumulado e teste de múltiplas parcelas; `AlmoxarifadoApiTest` passou em 2/2. #17 (Docker/Nginx), #18 (validação visual/E2E), #19 (21 coordenadas) e #20 (documentação contraditória) continuam pendentes.
+- Issue #17 em resolução: criado `frontend/tests/production-routes.test.mjs`, `ops/smoke-prod.ps1` e workflow manual `.github/workflows/production-smoke.yml`; teste local passou em 2/2 e a sintaxe PowerShell passou. Execução real do Compose continua pendente por Docker ausente.
+- Issue #15 finalizada tecnicamente: `AlmoxarifadoApiTest` passou em 2/2, o build do frontend passou e `git diff --check` não apontou erros. A conferência visual automatizada permanece pendente porque o host do navegador esteve indisponível; o servidor local e a API foram validados separadamente.
+- Issue #14 finalizada: `EventoApiTest` passou em 1/1, `agenda.test.mjs` passou em 11/11, o build do frontend passou e `git diff --check` não apontou erros.
+- Issue #13 finalizada: validação da ficha de inscrição confirmada com `InscricaoImagemTest` em 8/8 testes, incluindo CPF, telefone, datas, responsável de menor e prevenção de persistência parcial. `git diff --check` aprovado.
+- Issue #12 finalizada no escopo local: perfil `prod`, compose, scripts de backup/restauração e documentação revisados; simulação descartável restaurou banco, vídeo e imagem com sucesso. Limitação registrada: Docker não está instalado nesta sessão, portanto os containers não foram executados.
+- Issue #9 finalizada: proteção CSRF validada no backend com 4/4 cenários e no cliente com `csrf.test.mjs` aprovado. O login permanece isento conforme o contrato de segurança.
+- Corrigido o modal do Almoxarifado: ao abrir, o scroll do documento fica bloqueado, o scroll interno permanece disponível e o backdrop usa prioridade acima do cabeçalho. O bloqueio é restaurado ao fechar/desmontar. Build do frontend aprovado.
+- Corrigido o carregamento do Almoxarifado no ambiente local: havia uma instância antiga do backend na porta 8080, sem `/api/almoxarifado`, causando erro após o login. A instância atual foi iniciada e validada com login `ROLE_ADMIN` e resposta `200 []` na listagem.
+- Corrigido o bloqueio de login causado pelo interceptor CSRF global: `/login` agora é excluído explicitamente em `fetch` e `XMLHttpRequest`, conforme a isenção já configurada no backend. Testes de CSRF/login passaram (5/5) e o build do frontend passou.
+
+- Lote atual da issue #15: a consulta de empréstimos/devoluções agora exibe total, itens em aberto e devolvidos, ordena pela data da entrega e mantém itens devolvidos bloqueados para nova devolução. O servidor local iniciou e o build permanece aprovado, mas a conferência visual automatizada não foi possível porque o host do navegador estava indisponível. Próximo: conferir manualmente no navegador.
+
+## Issue #15 — persistência das movimentações do Almoxarifado — 16/11/2026
+
+- Criado o núcleo persistente no backend para retiradas e devoluções: entidade `AlmoxarifadoMovimentacao`, repositório, serviço e endpoints em `/api/almoxarifado`.
+- As movimentações registram tipo, material, quantidade, responsáveis, datas, estado, observações, autoria e status de devolução. A consulta e as mutações exigem perfil administrativo.
+- Implementado controle otimista de concorrência com `@Version`: uma devolução enviada com versão antiga retorna conflito, evitando sobrescrever a atualização de outro operador.
+- Fotos usam armazenamento dedicado configurável por `ALMOXARIFADO_FOTOS_DIR`, limite de 5 MB, validação de imagem, nome aleatório e endpoint próprio; falhas não confirmam a operação. O retorno do arquivo também possui fallback seguro de MIME.
+- Verificação: `AlmoxarifadoApiTest` passou com 2/2 testes; `git diff --check` sem erros.
+- Próximo lote: conectar os cards/formulários React do Almoxarifado a esse contrato, incluindo estados de carregamento, erro e preservação dos dados preenchidos.
+
+## Issue #15 — lote React concluído — 16/11/2026
+
+- Criado `frontend/src/almoxarifado/almoxarifado-service.js` com listagem, retirada, devolução e envio de fotos.
+- `AlmoxarifadoPage` consulta a API ao abrir e exibe carregamento/erro sem remover os cards existentes.
+- Verificações: `npm run build` passou e `git diff --check` passou.
+- Próximo lote: criar os modais/formulários React para registrar retirada, devolução e anexar fotos.
+
+## Issue #14 — Agenda compartilhada no backend — 16/11/2026
+
+- O backend de eventos agora possui contrato completo para consulta pública por lista/id e gestão administrativa por criação, edição e exclusão. Eventos ganharam `categoria`, `hora`, `responsavel` e `materiais`, além dos campos existentes.
+- `POST`, `PUT` e `DELETE` em `/api/eventos/**` exigem `ROLE_ADMIN`; `GET /api/eventos` e `GET /api/eventos/{id}` permanecem públicos. O identificador JPA é estável e os detalhes podem ser abertos por `?id=` sem depender de `localStorage`.
+- A Agenda React passou a consultar e persistir no backend. Registros antigos de `eventosEsporte` só são enviados quando o usuário aciona explicitamente `Importar para a agenda compartilhada`; falhas mostram erro e não removem o armazenamento local.
+- Criados `agenda-service.js`, `AgendaSharedPage.jsx`, `EventoSharedPage.jsx` e testes de conversão/agrupamento do contrato. A versão antiga da Agenda permanece preservada como referência e os testes legados continuam passando.
+- Verificações: `EventoApiTest` passou; testes de agenda passaram com 13/13; teste de contrato API/frontend passou com 2/2; `npm run build` e `git diff --check` aprovados.
+- Limitações: não foi validado com dois navegadores reais nem com uma conta administrativa real; migração de registros locais exige ação manual e cada criação retorna um novo identificador do servidor.
+
+## Issue #13 — validação da ficha de inscrição na API — 16/11/2026
+
+- `InscricaoService` agora valida no servidor os campos obrigatórios da ficha: participante, nascimento, modalidade, núcleo, data da declaração, assinatura e aceite da declaração. Nome e modalidade do envelope precisam coincidir com a ficha.
+- CPF informado é validado com dígitos verificadores; telefone exige 10 ou 11 dígitos; datas inválidas, futuras ou incompatíveis são rejeitadas. Menores de 18 anos exigem nome, CPF e telefone do responsável, com CPF e telefone validados.
+- A validação ocorre antes da criação e do `save`, evitando inscrição parcial. O consentimento de imagem continua aceitando `true`, `false` ou ausência, desde que a versão do termo permaneça coerente.
+- Testes atualizados e ampliados em `backend/src/test/java/br/gov/betim/esporte/InscricaoImagemTest.java`, cobrindo consentimentos, CPF inválido, menor sem responsável e ausência de persistência. Verificação: `-Dtest=InscricaoImagemTest` passou; `git diff --check` sem erros.
+- Limitações: a lista de modalidades e núcleos ainda é validada como texto não vazio; não foi feita integração com o banco auxiliar de núcleos nem validação em produção.
+
+## Issue #12 — configuração de produção e recuperação de dados — 16/11/2026
+
+- Criado `backend/src/main/resources/application-prod.properties`: `ddl-auto=validate`, console H2 e SQL detalhado desativados, credenciais externalizadas, cookie de sessão seguro/configurável e diretórios de dados/uploads definidos por ambiente.
+- Criado `docker-compose.prod.yml` com volumes nomeados separados para banco, vídeos e imagens, perfil `prod`, reinício automático e variáveis obrigatórias de credenciais.
+- Criados `ops/backup-portal.ps1` e `ops/restore-portal.ps1`; o backup inclui banco/cache e uploads, gera pasta datada e `SHA256SUMS.json`, e a restauração exige confirmação explícita (ou `-Force` somente para automação controlada).
+- Criado `docs/operacao-producao.md` com configuração, estratégia `validate` + migrações SQL revisadas, procedimento de backup/restauração e validações pós-restauração.
+- Verificações: backup e restauração executados em diretórios temporários descartáveis, conferindo banco, vídeo e imagem; `git diff --check` sem erros.
+- Limitações: Docker não está instalado nesta sessão, portanto `docker compose config` e a execução dos containers não foram verificadas; não houve acesso nem alteração de produção.
+
+## Issue #9 — proteção CSRF nas operações autenticadas — 16/11/2026
+
+- Ativada a proteção CSRF do Spring Security com `CookieCsrfTokenRepository`: o backend publica `XSRF-TOKEN` e valida o header `X-XSRF-TOKEN` em mutações. O processamento de login e os POSTs públicos de inscrição/suporte permanecem fora do filtro porque ainda não dependem de sessão autenticada.
+- Criado `GET /api/auth/csrf` e testes para token publicado, ausência, token inválido e token válido avançando até a autorização. Testes existentes de fotos, conquistas, regionais e horto foram ajustados para enviar CSRF em operações protegidas; adicionada a dependência de teste do Spring Security.
+- O cliente global em `frontend/public/js/portal-header.js` obtém o token e injeta o header automaticamente em `fetch` e `XMLHttpRequest`, cobrindo chamadas React, páginas legadas e uploads.
+- Verificações: `CsrfApiTest` passou com 4/4; testes frontend do cliente CSRF e cabeçalho passaram com 8/8; `git diff --check` sem erros. A suíte backend completa deve ser repetida em processo isolado se houver disputa pelo banco H2 operacional compartilhado.
+- Limitações: não foi realizado teste contra produção nem validação visual; o contrato ainda depende de o frontend ser servido pela mesma origem da API ou de configuração de cookie/CORS compatível.
+
+## Detalhe de modalidade legado concluído — 16/11/2026
+
+- `detalhe-modalidade.html` já estava coberto pelo catálogo React como o alias legado da modalidade Judô (`legacyHref` em `frontend/src/modalidades/catalog.js`). A rota compartilhada resolve o endereço antigo para `/judo`, e `ModalidadePage` renderiza conteúdo, horários, núcleos, descrição e galeria oficial a partir do conteúdo React.
+- Verificações: `npm run build` aprovado; `node --test tests/modalidades-react.test.mjs` passou com 3/3; o artefato `dist/detalhe-modalidade.html` foi conferido redirecionando para `/judo`.
+- Nenhum componente duplicado foi criado e o HTML legado permanece apenas como compatibilidade de entrada.
+- Limitação: validação visual/responsiva no navegador não realizada nesta sessão.
+
+## Almoxarifado adaptado para React — 16/11/2026
+
+- `frontend/almoxarifado.html` preservado como entrada legada e integrado a `/almoxarifado` com componente React no portal existente.
+- Mantidos `localStorage` (`almoxarifadoSemes`), catalogo de 15 materiais, retirada, devolucao, fotos locais, impressao, limpeza com confirmacao e tabela de movimentacoes.
+- Aplicados cabecalho/rodape compartilhados, tokens do portal, foco visivel, labels, responsividade e estilo de impressao.
+- Verificacoes: `npm run build` aprovado; `node --test tests/*.test.mjs` aprovado com 127 testes; `/almoxarifado` HTTP 200; `almoxarifado.html?origem=menu` redirecionou para `/almoxarifado?origem=menu`.
+- Limitacao: conferencia visual e interacao real no navegador nao foram executadas nesta sessao.
+
+## Almoxarifado limpo para recriacao — 16/11/2026
+
+- Removidos do componente React todos os elementos abaixo do cabecalho proprio de Almoxarifado: resumo, formularios, historico, botoes e interacoes locais.
+- Rota `/almoxarifado` e compatibilidade de `almoxarifado.html` preservadas; APIs, autenticacao e outras paginas nao foram alteradas.
+- Verificacao: `npm run build` aprovado; rota limpa HTTP 200 e entrada legada redirecionando para `/almoxarifado?origem=menu`.
+- Proximo passo: recriar o conteudo da pagina conforme a proxima orientacao do usuario.
+
+## Cards iniciais do almoxarifado — 16/11/2026
+
+- Criados tres cards visuais abaixo do cabecalho: Entrada, Saida e Historico.
+- Cards ainda nao possuem navegacao ou operacao; aguardam a definicao do conteudo de cada fluxo.
+- Verificacao: `npm run build` aprovado e `/almoxarifado` respondeu HTTP 200.
+
+## Icones dos cards do almoxarifado — 16/11/2026
+
+- Entrada usa caixa com seta para baixo (`fa-box-arrow-down`), Saida usa caixa com seta para cima (`fa-box-arrow-up`) e Historico usa livro (`fa-book`).
+- Verificacao: `npm run build` aprovado.
+
+## Icone do card Instrutor — 16/11/2026
+
+- Adicionado icone inline de pessoa diante de quadro ao card `Instrutor`, sem depender de classe externa.
+- Verificacao: `npm run build` aprovado.
+
+## Banco auxiliar de cadastro de nucleos — 16/11/2026
+
+- Analisada a planilha `TABELAS BI 11-26 (1).xlsx`, com seis abas e dados de regionais, nucleos, modalidades, matriculados e ofertas.
+- Criado `database/nucleos_mysql.sql`, banco MySQL isolado `portal_esporte_nucleos`, sem integração com o portal.
+- Criado `database/README-nucleos.md` com modelo, carga inicial, validação esperada e limites da etapa.
+- Modelo normalizado em `regionais`, `nucleos`, `modalidades` e `nucleos_modalidades`; carga inicial prevista: 11 regionais, 30 nucleos, 25 modalidades e 95 ofertas.
+- Verificacoes: contagem dos registros da fonte conferida; 95 relações núcleo–modalidade presentes no SQL; `git diff --check` aprovado. Cliente MySQL não está instalado nesta sessão, então a execução em servidor MySQL permanece pendente.
+- O backend, frontend, rotas, autenticação e banco H2 do portal não foram alterados.
+
+## Card de Quadras removido do Administrativo — 16/11/2026
+
+- Removido o card `Quadras do Horto` do componente React e da entrada HTML legada de Administrativo.
+- A rota independente `/agendamento-quadras` foi preservada; somente o atalho visual da área Administrativa foi retirado.
+- Verificações: testes administrativos confirmam os 12 documentos e a ausência do card; build e testes frontend executados nesta etapa.
+
+## Revisao do uso de React — 16/11/2026
+
+- Conferido `frontend/src/main.jsx`, `vite.config.js`, `scripts/copy-html-pages.mjs` e a árvore de páginas HTML.
+- Rotas canônicas de Home, modalidades, Regionais, Conquistas, Login, Administrativo, Inscrição e Almoxarifado usam o entrypoint React.
+- Agenda, agendamento de quadras, comunicação, detalhes de evento, downloads, frequência, importação de imagens/vídeos e presença continuam em HTML/JavaScript legado.
+- Arquivos HTML das rotas migradas permanecem como compatibilidade ou fonte legada; isso não significa que a rota canônica esteja sendo renderizada por eles.
+
+## Agenda adaptada para React — 16/11/2026
+
+- Criado `frontend/src/agenda/AgendaPage.jsx` com calendário, navegação mensal, destaque do dia atual, eventos, modal de criação/edição/exclusão, impressão e persistência em `localStorage`.
+- Criado `frontend/src/agenda/agenda.css` com visual responsivo, foco, impressão e tokens visuais alinhados ao portal.
+- Rota canônica `/agenda` adicionada ao React; `agenda.html` preservado como redirecionamento compatível no desenvolvimento e no build.
+- Mantido o armazenamento `eventosEsporte` e o encaminhamento de detalhes por `eventoSelecionado` para `detalhes-evento.html`.
+- Verificações: `node --test tests/agenda.test.mjs` com 11 testes aprovados; `npm run build` aprovado; `dist/agenda/index.html` gerado e `dist/agenda.html` redirecionando para `/agenda`.
+
+## Agendamento de quadras adaptado para React — 16/11/2026
+
+- Criado `frontend/src/horto/HortoPage.jsx`, preservando a verificação de `ROLE_ADMIN`, as APIs `/api/auth/me`, `/api/horto/quadras`, `/api/horto/reservas` e `/api/horto/esportes`, seleção de quadra, horários, filtros por tipo de piso, confirmação e tabela de reservas.
+- A rota canônica `/agendamento-quadras` passou a usar React; `agendamento-quadras.html` permanece como redirecionamento compatível no desenvolvimento e no build.
+- Reutilizado o stylesheet existente `public/css/agendamento-quadras.css`; detalhes, autenticação, limites de data e regras de conflito foram preservados.
+- Verificações: `node --test tests/horto-utils.test.mjs` com 6 testes aprovados; `npm run build` aprovado; entrada `dist/agendamento-quadras/index.html` gerada e redirecionamento legado verificado.
+
+## Central de arquivos adaptada para React — 16/11/2026
+
+- Criado `frontend/src/comunicacao/ArquivosPage.jsx` com os cards de importação de vídeos, importação de imagens e fotos oficiais automáticas.
+- Preservados os links de importação, consulta de `/api/fotos/status`, atualização manual somente para `ROLE_ADMIN` e compatibilidade de `comunicacao.html`.
+- Criado `frontend/src/comunicacao/arquivos.css` com visual responsivo, foco visível e cards alinhados ao portal.
+- Verificações: `node --test tests/fotos.test.mjs` com 5 testes aprovados; `npm run build` aprovado; entrada `dist/comunicacao/index.html` gerada e redirecionamento legado verificado.
+
+## Detalhes do evento adaptados para React — 16/11/2026
+
+- Criado `frontend/src/agenda/EventoPage.jsx` para ler `eventoSelecionado` do `localStorage` e renderizar título, categoria, data, hora, local, responsável, descrição, materiais e orientações.
+- Conteúdo de evento passou a ser renderizado com React, sem interpolação HTML; dados ausentes ou JSON inválido exibem mensagem segura.
+- Preservados voltar, imprimir e o link para `/almoxarifado`; `detalhes-evento.html` continua compatível e redireciona para `/detalhes-evento`.
+- Verificações: `node --test tests/agenda.test.mjs` com 11 testes aprovados; `npm run build` aprovado; entrada `dist/detalhes-evento/index.html` gerada e redirecionamento legado verificado.
+
+## Downloads adaptados para React — 16/11/2026
+
+- Criado `frontend/src/downloads/DownloadsPage.jsx` com os quatro documentos oficiais, links de download e instruções de entrega.
+- Corrigido no novo componente o nome do arquivo do protocolo de vídeos e fotos para corresponder ao PDF existente no projeto.
+- Criado `frontend/src/downloads/downloads.css` com grade responsiva, estados de foco e cartões alinhados ao portal.
+- A rota canônica `/downloads` passou a usar React; `downloads.html` continua compatível e redireciona no desenvolvimento e no build.
+- Verificações: `npm run build` aprovado; `dist/downloads/index.html` gerado; redirecionamento legado verificado; os quatro PDFs da página encontrados no projeto.
+
+## Frequência adaptada para React — 16/11/2026
+
+- Criado `frontend/src/frequencia/FrequenciaPage.jsx` com seleção de data, turma, instrutor, lista de atletas e estados de presença, falta e falta justificada.
+- Criado `frontend/src/frequencia/frequencia.css` com resumo de contagens, tabela responsiva, foco visível e visual alinhado ao portal.
+- A rota canônica `/frequenciapreenchimento` passou a usar React; `frequenciapreenchimento.html` continua compatível e redireciona.
+- O Firebase do HTML original tinha apenas credenciais-placeholder; por isso o lançamento permanece local nesta etapa e informa que o envio ao banco será conectado depois.
+- Verificações: `npm run build` aprovado; `dist/frequenciapreenchimento/index.html` gerado; redirecionamento legado verificado.
+
+## Importação de imagens adaptada para React — 16/11/2026
+
+- Criado `frontend/src/uploads/ImportarImagensPage.jsx` com seleção múltipla, envio sequencial, progresso por arquivo, mensagens de sucesso/erro e galeria das imagens importadas.
+- Preservados os endpoints `GET /api/imagens` e `POST /api/imagens`, o campo multipart `arquivo`, credenciais da sessão e limite/formato aplicados pelo backend.
+- Criado `frontend/src/uploads/uploads.css` com visual responsivo e foco visível; a rota canônica `/importar-imagens` foi adicionada e `importar-imagens.html` continua compatível.
+- Verificações: `npm run build` aprovado; `dist/importar-imagens/index.html` gerado; redirecionamento legado verificado.
+
+## Importação de vídeos adaptada para React — 16/11/2026
+
+- Criado `frontend/src/uploads/ImportarVideosPage.jsx` com seleção de vídeo, upload via `POST /api/videos`, progresso, mensagens e listagem dos vídeos importados via `GET /api/videos`.
+- Preservados o campo multipart `arquivo`, credenciais da sessão, formatos aceitos pelo backend e limite de 200 MB aplicado pela API.
+- Criado `frontend/src/uploads/videos.css`; a rota canônica `/importar-videos` foi adicionada e `importar-videos.html` continua compatível.
+- Verificações: `npm run build` aprovado; `dist/importar-videos/index.html` gerado; redirecionamento legado verificado.
+
+## Relatório de presença adaptado para React — 16/11/2026
+
+- Criado `frontend/src/presenca/PresencaPage.jsx` com os dados mensais de modalidade, instrutor, núcleo, alunos e estados P/F/FJ do relatório original.
+- Criado `frontend/src/presenca/presenca.css` com tabela responsiva, legenda, assinaturas, foco visível e regras de impressão.
+- A rota canônica `/presenca` passou a usar React; `presenca.html` continua compatível e redireciona.
+- Nenhuma API foi inventada ou alterada: o relatório original era estático e continua sendo apresentado como relatório estático.
+- Verificações: `npm run build` aprovado; `dist/presenca/index.html` gerado; redirecionamento legado verificado.
+
+## Página geral antiga encaminhada para a Home React — 16/11/2026
+
+- Identificado que `esporte.html` era uma cópia antiga da Home, com carrossel, notícias, mapa e navegação próprios, divergentes da Home oficial em React.
+- O endereço legado agora redireciona para `/`, preservando query string e fragmento no build; a rota de desenvolvimento também redireciona.
+- Nenhuma segunda implementação foi criada e o conteúdo da Home React não foi alterado.
+- Verificação: `npm run build` aprovado; `dist/esporte.html` confirmado com `location.replace("/"...)`.
+
+## Página esporteteste encaminhada para a Home React — 16/11/2026
+
+- Identificado que `esporteteste.html` era outra variação antiga da Home, com seções e scripts duplicados.
+- O endereço legado agora redireciona para `/`, preservando query string e fragmento no build; a rota de desenvolvimento também redireciona.
+- A Home oficial em React permaneceu como única implementação ativa.
+- Verificação: `npm run build` aprovado; `dist/esporteteste.html` confirmado com `location.replace("/"...)`.
+
+## Páginas de teste e cópia encaminhadas para a Home React — 16/11/2026
+
+- Identificados os arquivos `index - Copia.html`, `index - Copia1.html`, `teste28.html` e `teste28 (2).html` como variações de teste/cópia sem rota oficial.
+- Todos os endereços legados agora redirecionam para `/` no desenvolvimento e no build, evitando manter implementações paralelas.
+- Verificações: `npm run build` aprovado; os quatro arquivos publicados foram substituídos por redirecionamentos para a Home.
+
+## Capi adaptada para React — 16/11/2026
+
+- Criado `frontend/src/capi/CapiPage.jsx` com a mascote local, frases automáticas, interação por clique, espelhamento conforme o mouse e limpeza de timers/listeners no desmontar.
+- Criado `frontend/src/capi/capi.css` com animação, acessibilidade de foco e suporte a movimento reduzido.
+- A rota canônica `/capi` passou a usar React; `capi.html` continua compatível e redireciona.
+- Verificações: `npm run build` aprovado; `dist/capi/index.html` gerado; redirecionamento legado verificado.
+
+## Descanso adaptado para React — 16/11/2026
+
+- Criado `frontend/src/descanso/DescansoPage.jsx` com a animação Matrix em canvas, texto BETA, redimensionamento responsivo e ciclo `requestAnimationFrame`.
+- Criado `frontend/src/descanso/descanso.css` com fundo visual, altura da página e preferência de movimento reduzido.
+- A rota canônica `/descanso` passou a usar React; `descanso.html` continua compatível e redireciona.
+- Verificações: `npm run build` aprovado; `dist/descanso/index.html` gerado; redirecionamento legado verificado.
+
+## Cards da inscricao com fundo padronizado — 16/11/2026
+
+- O card clicavel `Aluno` recebeu o mesmo fundo branco, borda e cor dos cards `Instrutor` e `Nucleos`.
+- O comportamento de abertura da ficha do aluno foi preservado.
+- Verificacao: `npm run build` aprovado.
+
+## Cabecalho da inscricao simplificado — 16/11/2026
+
+- O cabecalho agora exibe somente `Ficha de inscrição`; subtitulo, aviso e identificacao complementar foram removidos.
+- Os cards Aluno, Instrutor e Nucleos foram preservados.
+- Verificacao: `npm run build` aprovado.
+
+## Endereco alternativo da inscricao — 16/11/2026
+
+- A mesma pagina React de inscricao passou a estar disponivel em `/inscricaoAluno` e no build em `dist/inscricaoAluno/index.html`.
+- `/inscricao`, `Inscricao.html` e `inscricao.html` foram preservados para compatibilidade; conteudo, API `/api/inscricoes` e autenticacao nao foram alterados.
+- Verificacao: `npm run build` aprovado; `/inscricaoAluno` respondeu HTTP 200.
+
+## Pagina de inscricao recriada com tres cards — 16/11/2026
+
+- Removido todo o conteudo abaixo do cabecalho da ficha e adicionados os cards `Aluno`, `Instrutor` e `Nucleos`.
+- Rotas, compatibilidade de `Inscricao.html`/`inscricao.html`, servicos e API foram preservados no projeto, mas o formulario nao e renderizado nesta etapa.
+- Verificacao: `npm run build` aprovado; `/inscricaoAluno` respondeu HTTP 200.
+- Pendencia: `tests/inscricao-react.test.mjs` ainda contem expectativas da ficha completa e precisa ser atualizado para os tres cards antes de voltar a integrar o formulario.
+
+## Ficha do aluno em aba flutuante — 16/11/2026
+
+- O card `Aluno` agora abre a ficha baseada na planilha `Ficha_Inscricao_Programa_Viva_Esportes (1).xlsx` em um modal React flutuante.
+- O modal contem as cinco secoes preenchiveis da ficha, botao `X`, Fechar, Escape e fechamento ao clicar no fundo.
+- O botao `Salvar ficha` apenas confirma o preenchimento local e informa que o envio sera conectado na proxima etapa; nenhuma API foi chamada.
+- Verificacao: `npm run build` aprovado; `/inscricaoAluno` respondeu HTTP 200. Conferencia visual interativa em navegador permanece pendente.
+
+## Cards da secao Acao em Video reduzidos — 16/11/2026
+
+- Reduzidos em 50% os limites de largura dos dois videos principais, de 400px para 200px, e da coluna de videos menores, de 200px para 100px.
+- Controles, fontes, proporcao e demais secoes da Home foram preservados.
+- Verificacao: `npm run build` aprovado. Conferencia visual em navegador permanece pendente.
+
+## Restauracao do tamanho original dos videos — 16/11/2026
+
+- Desfeita a reducao da secao `Acao em Video`: videos principais restaurados para 400px e coluna menor para 200px.
+- Verificacao: `npm run build` aprovado.
+
+## Remocao global do chat de suporte — 16/11/2026
+
+- Removido do `portal-header.js` o carregamento global de `portal-suporte.js` e `portal-suporte.css`; nenhuma pagina injeta mais o chat.
+- API, cliente e base de conhecimento de suporte foram preservados, sem interface ativa no portal.
+- Teste `node --test tests/suporte.test.mjs`: 8 aprovados. `npm run build`: aprovado.
+
+## Chat de suporte removido do almoxarifado — 16/11/2026
+
+- O injetor global agora nao carrega o CSS nem o script do chat quando a rota e `/almoxarifado` ou `almoxarifado.html`.
+- O chat permanece habilitado nas demais paginas do portal.
+- Verificacao: `npm run build` aprovado.
+
+## Card de relatorios e indicadores — 16/11/2026
+
+- Adicionado o card `Relatórios e indicadores`, com icone inline de grafico.
+- O card permanece visual, sem dados ou navegacao inventados.
+- Verificacao: `npm run build` aprovado.
+
+## Card de distribuicao por unidade esportiva — 16/11/2026
+
+- Adicionado o card `Distribuição por unidade esportiva`, com icone inline de unidades prediais.
+- O card permanece visual, sem navegacao ou fluxo operacional definido.
+- Verificacao: `npm run build` aprovado.
+
+## Remocao da descricao do card de movimentacoes — 16/11/2026
+
+- Removida a descricao do card `Entradas e saídas`; titulo, icone e demais cards preservados.
+- Verificacao: `npm run build` aprovado.
+
+## Card unificado de Entradas e saidas — 16/11/2026
+
+- Entrada e Saida foram unificadas no card `Entradas e saídas`, com icone de caixa bidirecional.
+- Incluida a orientacao: registrar recebimentos, distribuicoes, transferencias e baixas, identificando o responsavel por cada movimentacao.
+- Permanecem separados os cards de emprestimo/devolucoes e cadastro de materiais.
+- Verificacao: `npm run build` aprovado.
+
+## Grade com tres cards por linha — 16/11/2026
+
+- A grade do almoxarifado foi ajustada para tres cards por linha em telas largas; o quarto card quebra para a linha seguinte.
+- Verificacao: `npm run build` aprovado.
+
+## Card de cadastro de materiais — 16/11/2026
+
+- Adicionado o quarto card visual `Cadastro de materiais`, com icone de formulario e cor verde institucional.
+- Grade ajustada para quatro colunas em telas largas, duas em telas intermediarias e uma no celular.
+- Verificacao: `npm run build` aprovado.
+
+## Renomeacao do card de historico — 16/11/2026
+
+- O terceiro card agora exibe `Empréstimo e devoluções`; icone de livro e classe estrutural foram preservados.
+- Verificacao: `npm run build` aprovado.
+
+## Correção dos icones de Entrada e Saida — 16/11/2026
+
+- Substituidas as classes Font Awesome inexistentes por SVGs inline de caixa com seta para baixo e para cima; o livro do Historico foi preservado.
+- Verificacao: `npm run build` aprovado.
 
 Adaptar diretamente o portal existente aos padrões da equipe, em lotes pequenos,
 preservando funcionalidades, APIs, sessão, banco e uploads. Usar sempre a skill

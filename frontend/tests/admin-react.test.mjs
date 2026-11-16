@@ -33,7 +33,7 @@ test('painel não mostra informações administrativas antes da verificação de
     const html = renderToStaticMarkup(React.createElement(Page));
     assert.match(html, /Verificando acesso/); assert.doesNotMatch(html, /664\.797|Quadro de Cargos|data-documento/);
 });
-test('conteúdo preserva doze documentos, tabelas e agendamento; cada botão envia o ID correto', async () => {
+test('conteúdo preserva os documentos e tabelas; cada botão envia o ID correto', async () => {
     const Content = await componente('AdminContent.jsx'); const ids = [];
     const tree = Content({ onDocument: id => ids.push(id) });
     function visitar(node) { if (!React.isValidElement(node)) return;
@@ -42,7 +42,8 @@ test('conteúdo preserva doze documentos, tabelas e agendamento; cada botão env
     }
     visitar(tree); assert.equal(ids.length, 12); ids.forEach(id => assert.ok(documentosAdministrativos[id]));
     const html = renderToStaticMarkup(tree);
-    for (const texto of ['Gestão Administrativa', '664.797,00', '582.372,18', 'Quadro de Cargos', '/agendamento-quadras.html']) assert.ok(html.includes(texto));
+    for (const texto of ['Gestão Administrativa', '664.797,00', '582.372,18', 'Quadro de Cargos']) assert.ok(html.includes(texto));
+    assert.doesNotMatch(html, /Quadras do Horto|agendamento-quadras/);
     assert.equal((html.match(/<h1/g) || []).length, 1); assert.match(html, /scope="col"/);
 });
 test('documentos preservam PDF e resumo conforme disponibilidade e ações internas na mesma aba', async () => {

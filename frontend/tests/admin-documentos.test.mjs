@@ -103,11 +103,7 @@ test('todos os PDFs são arquivos válidos e todas as fontes estão identificada
 });
 
 
-test('Quadras do Horto abre diretamente a pagina de agendamento', () => {
-    const card = pagina.match(/<a\b[^>]*href="agendamento-quadras\.html"[^>]*>[\s\S]*?<\/a>/)?.[0];
-    assert.ok(card);
-    assert.match(card, /Quadras do Horto/);
-    assert.match(card, /Agendamento e disponibilidade/);
-    assert.doesNotMatch(card, /data-documento|aria-haspopup|<button/);
+test('area administrativa não exibe o card de Quadras do Horto', () => {
+    assert.doesNotMatch(pagina, /Quadras do Horto|Agendamento e disponibilidade/);
     assert.ok(existsSync(new URL('../agendamento-quadras.html', import.meta.url)));
 });

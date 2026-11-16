@@ -30,7 +30,7 @@ class InscricaoImagemTest {
     @Test
     void registraAutorizacaoExpressaComVersaoEData() throws Exception {
         mvc.perform(post("/api/inscricoes").contentType(MediaType.APPLICATION_JSON).content("""
-                {"nomeCompleto":"Participante teste","telefone":"31999999999","modalidade":"futebol",
+                {"nomeCompleto":"Participante teste","telefone":"31999999999","modalidade":"futebol","dadosFicha":{"nome":"Participante teste","modalidade":"futebol","dataNascimento":"2000-04-12","nucleo":"Horto","dataDeclaracao":"2026-11-16","assinatura":"Participante teste","aceiteDeclaracao":"true"},
                  "autorizaUsoImagem":true,"termoImagemVersao":"2026-11-04"}
                 """))
                 .andExpect(status().isCreated())
@@ -44,8 +44,8 @@ class InscricaoImagemTest {
         mvc.perform(post("/api/inscricoes").contentType(MediaType.APPLICATION_JSON).content("""
                 {"nomeCompleto":"Participante teste","telefone":"31999999999","modalidade":"volei",
                  "autorizaUsoImagem":false,"termoImagemVersao":"2026-11-04",
-                 "dadosFicha":{"nomeResponsavel":"Responsável teste","dataNascimento":"2015-04-12",
-                               "nucleo":"Horto Municipal","alergias":"Informação de teste"}}
+                 "dadosFicha":{"nome":"Participante teste","modalidade":"volei","nomeResponsavel":"Responsável teste","dataNascimento":"2015-04-12",
+                               "nucleo":"Horto Municipal","alergias":"Informação de teste","cpfResponsavel":"529.982.247-25","telefoneResponsavel":"31988887777","dataDeclaracao":"2026-11-16","assinatura":"Responsável teste","aceiteDeclaracao":"true"}}
                 """))
                 .andExpect(status().isCreated()).andExpect(jsonPath("$.autorizaUsoImagem").value(false))
                 .andExpect(jsonPath("$.decisaoImagemEm").isNotEmpty());
@@ -59,7 +59,7 @@ class InscricaoImagemTest {
     @Test
     void permiteContinuarSemResponderAoTermo() throws Exception {
         mvc.perform(post("/api/inscricoes").contentType(MediaType.APPLICATION_JSON).content("""
-                {"nomeCompleto":"Participante teste","telefone":"31999999999","modalidade":"pilates",
+                {"nomeCompleto":"Participante teste","telefone":"31999999999","modalidade":"pilates","dadosFicha":{"nome":"Participante teste","modalidade":"pilates","dataNascimento":"2000-04-12","nucleo":"Horto","dataDeclaracao":"2026-11-16","assinatura":"Participante teste","aceiteDeclaracao":"true"},
                  "autorizaUsoImagem":null,"termoImagemVersao":"2026-11-04"}
                 """))
                 .andExpect(status().isCreated()).andExpect(jsonPath("$.autorizaUsoImagem").doesNotExist())
@@ -70,7 +70,7 @@ class InscricaoImagemTest {
     @Test
     void aceitaClientesAnterioresSemConsentimentoImplicito() throws Exception {
         mvc.perform(post("/api/inscricoes").contentType(MediaType.APPLICATION_JSON).content("""
-                {"nomeCompleto":"Participante teste","telefone":"31999999999","modalidade":"futebol"}
+                {"nomeCompleto":"Participante teste","telefone":"31999999999","modalidade":"futebol","dadosFicha":{"nome":"Participante teste","modalidade":"futebol","dataNascimento":"2000-04-12","nucleo":"Horto","dataDeclaracao":"2026-11-16","assinatura":"Participante teste","aceiteDeclaracao":"true"}}
                 """))
                 .andExpect(status().isCreated()).andExpect(jsonPath("$.autorizaUsoImagem").doesNotExist())
                 .andExpect(jsonPath("$.termoImagemVersao").doesNotExist());
@@ -90,6 +90,26 @@ class InscricaoImagemTest {
     @Test
     void naoCriaInscricaoVazia() throws Exception {
         mvc.perform(post("/api/inscricoes").contentType(MediaType.APPLICATION_JSON).content("{}"))
+                .andExpect(status().isBadRequest());
+        assertThat(inscricoes.count()).isZero();
+    }
+
+    @Test
+    void rejeitaCpfInvalidoSemGravar() throws Exception {
+        mvc.perform(post("/api/inscricoes").contentType(MediaType.APPLICATION_JSON).content("""
+                {"nomeCompleto":"Teste","cpf":"111.111.111-11","telefone":"31999999999","modalidade":"futebol",
+                 "dadosFicha":{"nome":"Teste","cpf":"111.111.111-11","dataNascimento":"2000-04-12","nucleo":"Horto","dataDeclaracao":"2026-11-16","assinatura":"Teste","aceiteDeclaracao":"true"}}
+                """))
+                .andExpect(status().isBadRequest());
+        assertThat(inscricoes.count()).isZero();
+    }
+
+    @Test
+    void exigeResponsavelParaMenor() throws Exception {
+        mvc.perform(post("/api/inscricoes").contentType(MediaType.APPLICATION_JSON).content("""
+                {"nomeCompleto":"Menor teste","telefone":"31999999999","modalidade":"futebol",
+                 "dadosFicha":{"nome":"Menor teste","dataNascimento":"2015-04-12","nucleo":"Horto","dataDeclaracao":"2026-11-16","assinatura":"Menor teste","aceiteDeclaracao":"true"}}
+                """))
                 .andExpect(status().isBadRequest());
         assertThat(inscricoes.count()).isZero();
     }
